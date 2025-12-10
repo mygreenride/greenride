@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+  font-family: 'Arial Rounded MT Bold', Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+header, nav, main, section, footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-yellow-center {
+  background-color: #FFFF00;
+  text-align: center;
+}
+
+.bg-black-center {
+  background-color: #000000;
+  text-align: center;
+}
+
+.color-black {
+  color: #000000;
+}
+
+.color-yellow {
+  color: #FFFF00;
+}
+
+.color-white {
+  color: #FFFFFF;
+}
+
+.font-arial-rounded-bold {
+  font-family: 'Arial Rounded MT Bold', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.font-size-37pt { font-size: 37pt; }
+.font-size-55pt { font-size: 55pt; }
+.font-size-59pt { font-size: 59pt; }
+.font-size-63pt { font-size: 63pt; }
+.font-size-71pt { font-size: 71pt; }
+.font-size-80pt { font-size: 80pt; }
+.font-size-107pt { font-size: 107pt; }
+
+nav {
+  font-size: 2rem;
+  padding: 1rem 0;
+  background: #000;
+  color: #FFFF00;
+  letter-spacing: 0.1em;
+}
+
+header {
+  padding: 2rem 0 1rem 0;
+  background: #FFFF00;
+  color: #000;
+  text-align: center;
+}
+
+section {
+  margin: 2rem 0;
+  padding: 1rem 0;
+}
+
+footer {
+  background: #000;
+  color: #FFFF00;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+}
+
+/* Utility classes */
+.text-underline {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .font-size-107pt { font-size: 40pt; }
+  .font-size-80pt { font-size: 30pt; }
+  .font-size-71pt { font-size: 28pt; }
+  .font-size-63pt { font-size: 24pt; }
+  .font-size-59pt { font-size: 22pt; }
+  .font-size-55pt { font-size: 20pt; }
+  .font-size-37pt { font-size: 16pt; }
+  nav { font-size:

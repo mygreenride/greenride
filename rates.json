@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "origin": "San Diego metro",
+    "currency": "USD",
+    "updated": "2025-10-03"
+  },
+  "vehicles": [
+    { "key": "sedan", "label": "Sedan (up to 4)" },
+    { "key": "suv",   "label": "SUV" },
+    { "key": "van",   "label": "Van" }
+  ],
+  "zones": [
+    {
+      "key": "zoneA",
+      "label": "Downtown / Central",
+      "zipPrefixes": ["92101","92102","92103","92104","92105","92110","92113","92114","92116"]
+    },
+    {
+      "key": "zoneB",
+      "label": "North City / La Jolla",
+      "zipPrefixes": ["92037","92109","92117","92122"]
+    },
+    {
+      "key": "zoneC",
+      "label": "North County",
+      "zipPrefixes": ["92024","92025","92026","92027","92028","92029","92064","92078","92081","92083","92084","92054","92056","92057"]
+    }
+  ],
+  "routes": [
+    {
+      "id": "lax",
+      "destination": "LAX (Los Angeles International Airport)",
+      "prices": {
+        "zoneA": { "sedan": 275, "suv": 325, "van": 375 },
+        "zoneB": { "sedan": 295, "suv": 350, "van": 399 },
+        "zoneC": { "sedan": 315, "suv": 370, "van": 425 }
+      },
+      "notes": "Flat rate from most San Diego metro zones."
+    },
+    {
+      "id": "san",
+      "destination": "SAN (San Diego International Airport)",
+      "prices": {
+        "zoneA": { "sedan": "meter", "suv": "meter", "van": "meter" },
+        "zoneB": { "sedan": "meter", "suv": "meter", "van": "meter" },
+        "zoneC": { "sedan": "meter", "suv": "meter", "van": "meter" }
+      },
+      "notes": "Local trips to SAN typically run on meter; see Regular Local Rates."
+    },
+    {
+      "id": "tij",
+      "destination": "TIJ (Tijuana International Airport)",
+      "prices": {
+        "zoneA": { "sedan": null, "suv": null, "van": null },
+        "zoneB": { "sedan": null, "suv": null, "van": null },
+        "zoneC": { "sedan": null, "suv": null, "van": null }
+      },
+      "notes": "Cross-border requirements apply; call for quote."
+    }
+  ],
+  "footnotes": [
+    "All tolls and parking fees are additional.",
+    "20% gratuity will be added to all reservations.",
+    "Additional waiting time charges apply by the minute.",
+    "Up to 4 people ride for the same rate in a sedan (same party & address).",
+    "Time outside normal point-to-point may be billed at $80/hr + 20% gratuity."
+  ],
+  "form": {
+    "base": "https://docs.google.com/forms/d/e/1FAIpQLSeeYE9U35B4nYWRIoBxvEzKT9nxb9ob5z25mdQ8jw1_veAYTg/viewform",
+    "entries": {
+      "destination": "entry.1234567890",
+      "zip":         "entry.1111111111",
+      "vehicle":     "entry.2222222222",
+      "phone":       "entry.3333333333",
+      "notes":       "entry.4444444444"
+      /* Replace these with your actual Google Form entry IDs (steps below) */
+    }
+  }
+}

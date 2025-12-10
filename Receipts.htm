@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Green Ride Receipts | Call for Trip Receipt | San Diego Airport Transportation</title>
+  <meta name="description" content="Need a receipt for your Green Ride trip? Call 619-200-2060 for a fast receipt lookup. Optional online form available. Our vehicles are black; we do not operate green cars."/>
+  <link rel="icon" href="https://greenride.net/favicon.ico"/>
+
+  <style>
+    :root{
+      --black:#000;
+      --yellow:#f1c40f;
+      --white:#fff;
+      --font: Arial, Helvetica, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--black);color:var(--yellow);font-family:var(--font)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block;margin:0 auto}
+    .wrap{max-width:1100px;margin:auto;padding:24px}
+    .section{padding:32px 16px;text-align:center}
+    .section--dark{background:var(--black);color:var(--yellow)}
+    .section--light{background:var(--yellow);color:var(--black)}
+    .title{font-weight:800;line-height:1.1;margin:0 0 8px}
+    .title--xl{font-size:clamp(28px,6vw,56px)}
+    .title--xxl{font-size:clamp(36px,9vw,72px)}
+    .lead{font-size:clamp(16px,2.4vw,22px);margin:8px 0 0}
+    .note{font-size:clamp(14px,2.2vw,18px)}
+    .cta-phone{display:inline-block;font-weight:800;font-size:clamp(28px,7vw,64px);padding:.25em .6em;border:3px solid currentColor;border-radius:12px}
+    .btn{display:inline-block;font-weight:700;border:2px solid currentColor;border-radius:10px;padding:.6em 1em}
+    .btn--invert{background:transparent}
+    .nav{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+    .nav a{padding:.5em 1em;border:2px solid currentColor;border-radius:12px;font-weight:700}
+    .grid{display:grid;gap:16px}
+    .grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .disclaimer{margin-top:10px;opacity:.9}
+  </style>
+</head>
+<body>
+
+  <!-- HERO (dark) -->
+  <header class="section section--dark">
+    <div class="wrap">
+      <img src="https://greenride.net/images/350by350a-green-ride.jpg" alt="Green Ride logo" style="width:120px;height:auto"/>
+      <h1 class="title title--xxl" style="margin-top:10px">Request a Receipt</h1>
+      <p class="lead">Fastest way: <strong>call us</strong> and we’ll look up your trip and email your receipt.</p>
+      <p style="margin:16px 0 0">
+                <a class="cta-phone" href="tel:619-200-2060">Call: 619-200-2060</a>
+        <a class="cta-phone" href="tel:800-893-7210">Toll-Free: 800-893-7210</a>
+      </p>
+      <p class="note disclaimer">Note: Our vehicles are <strong>black</strong>; we do not operate green-color vehicles.</p>
+    </div>
+  </header>
+
+  <!-- NAV (light) -->
+  <section class="section section--light">
+    <div class="wrap">
+      <div class="nav">
+        <a href="https://greenride.net">Home</a>
+        <a href="https://greenride.net/curbside-.html">Curbside</a>
+        <a href="https://docs.google.com/spreadsheets/d/18FPKJnPj1aRNw_mtdfZyCSuVCH1MuYZx5seodhxSwcQ/edit?usp=sharing">Airport Rates</a>
+        <a href="https://greenride.net/terms_and_conditions.html">Policy</a>
+        <a href="https://greenride.net/Cancel.html">Cancellation</a>
+        <a href="https://greenride.net/credit_card_authorization_online-b.htm">Credit Card Form</a>
+        <a href="https://greenride.net/aboutus.html">About</a>
+        <a href="https://greenride.net/contact-2.html">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO GET YOUR RECEIPT (dark) -->
+  <section class="section section--dark">
+    <div class="wrap">
+      <h2 class="title title--xl">What We Need to Find Your Trip</h2>
+      <div class="grid grid--2" style="align-items:start; margin-top:16px; text-align:left">
+        <div class="note">
+          <ul>
+            <li>Passenger name</li>
+            <li>Phone number used for the ride</li>
+            <li>Ride date and approximate pickup time</li>
+            <li>Pickup and destination</li>
+            <li>Last 4 digits of payment card (if applicable)</li>
+          </ul>
+        </div>
+        <div class="note">
+          <p>Call now and we’ll email your receipt right away (or within a reasonable time if archival lookup is needed).</p>
+          <p style="margin-top:10px"><a class="cta-phone" href="tel:619-200-2060">Call: 619-200-2060</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTIONAL FORM (light) -->
+  <section class="section section--light">
+    <div class="wrap">
+      <h2 class="title title--xl">Prefer to Use a Form?</h2>
+      <p class="lead">You can also submit a receipt request online. We’ll follow up by email.</p>
+      <!-- Existing Formsite embed -->
+      <div id="receipt-form" class="banner" style="margin-top:12px">
+        <script type="text/javascript" src="https://fs25.formsite.com/include/form/embedManager.js?377438203"></script>
+        <script type="text/javascript">
+          EmbedManager.embed({
+            key: "https://fs25.formsite.com/res/showFormEmbed?EParam=m%2FOmK8apOTBVXfZfGRsqErg6tU9eAVvo&377438203",
+            width: "100%",
+            showFormLogin: false
+          });
+        </script>
+      </div>
+      <p class="note disclaimer">For the fastest service, please <strong>call</strong> us instead of the form.</p>
+    </div>
+  </section>
+
+  <!-- IMAGE / BRAND STRIP (dark) -->
+  <section class="section section--dark">
+    <div class="wrap">
+      <img src="https://greenride.net/$2/onon.png" alt="Green Ride vehicles banner"/>
+      <p class="note" style="margin-top:8px">Vehicles shown are representative. Fleet color: <strong>black</strong>.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER (light) -->
+  <footer class="section section--light">
+    <div class="wrap">
+      <p class="lead" style="margin:0">&copy; 2003–2025 • Green Ride • All rights reserved</p>
+      <p class="note" style="margin:6px 0 0">PSC-TCP-17591-P</p>
+    </div>
+  </footer>
+
+</body>
+</html>
