@@ -26,16 +26,20 @@
       box-sizing:border-box;
     }
 
-    html{
-      scroll-behavior:smooth;
-    }
-
+    html,
     body{
       margin:0;
       padding:0;
+      width:100%;
+      max-width:100%;
+      overflow-x:hidden;
       background:var(--black);
       color:var(--yellow);
       font-family:var(--font);
+    }
+
+    html{
+      scroll-behavior:smooth;
     }
 
     a{
@@ -44,21 +48,28 @@
     }
 
     img{
+      display:block;
+      width:100%;
       max-width:100%;
       height:auto;
-      display:block;
       margin:0 auto;
+      object-fit:contain;
     }
 
     .wrap{
+      width:100%;
       max-width:1100px;
-      margin:auto;
+      margin:0 auto;
       padding:24px;
+      overflow:hidden;
     }
 
     .section{
+      width:100%;
+      max-width:100%;
       padding:32px 16px;
       text-align:center;
+      overflow:hidden;
     }
 
     .section--dark{
@@ -92,24 +103,14 @@
 
     .cta-phone{
       display:inline-block;
+      max-width:100%;
       font-weight:800;
-      font-size:clamp(26px,7vw,60px);
+      font-size:clamp(24px,7vw,60px);
       padding:.25em .6em;
       border:3px solid currentColor;
       border-radius:12px;
       margin:4px;
-    }
-
-    .btn{
-      display:inline-block;
-      font-weight:700;
-      border:2px solid currentColor;
-      border-radius:10px;
-      padding:.6em 1em;
-    }
-
-    .btn--invert{
-      background:transparent;
+      overflow-wrap:anywhere;
     }
 
     .grid{
@@ -148,10 +149,12 @@
 
     /* HORIZONTAL NAVIGATION */
     .main-nav{
+      width:100%;
       background:var(--yellow);
       color:var(--black);
       border-top:3px solid var(--black);
       border-bottom:3px solid var(--black);
+      overflow:hidden;
     }
 
     .main-nav ul{
@@ -168,6 +171,7 @@
     .main-nav li{
       margin:0;
       padding:0;
+      flex:0 0 auto;
     }
 
     .main-nav a{
@@ -176,9 +180,9 @@
       border:2px solid var(--black);
       border-radius:8px;
       font-weight:800;
-      text-decoration:none;
       background:var(--yellow);
       color:var(--black);
+      white-space:nowrap;
     }
 
     .main-nav a:hover,
@@ -187,7 +191,7 @@
       color:var(--yellow);
     }
 
-    /* SMALL POLICY LINK ROWS */
+    /* POLICY LINKS */
     .sub-nav{
       display:flex;
       flex-wrap:wrap;
@@ -203,17 +207,41 @@
       font-weight:700;
     }
 
+    /* RESPONSIVE IMAGES */
+    .zone-image{
+      width:100%;
+      max-width:650px;
+      height:auto;
+      margin:20px auto 0;
+    }
+
+    .vehicle-image{
+      width:100%;
+      max-width:950px;
+      height:auto;
+      margin:0 auto;
+    }
+
+    .logo{
+      width:120px;
+      max-width:120px;
+      height:auto;
+      margin:0 auto;
+    }
+
     @media(max-width:700px){
 
-      .main-nav ul{
-        flex-wrap:nowrap;
+      .main-nav{
         overflow-x:auto;
-        justify-content:flex-start;
         -webkit-overflow-scrolling:touch;
       }
 
-      .main-nav a{
-        white-space:nowrap;
+      .main-nav ul{
+        width:max-content;
+        min-width:100%;
+        max-width:none;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
       }
 
       .grid--2{
@@ -222,6 +250,27 @@
 
       .wrap{
         padding:20px 14px;
+      }
+
+      .section{
+        padding:28px 10px;
+      }
+
+      .logo{
+        width:100px;
+        max-width:100px;
+      }
+
+      .zone-image,
+      .vehicle-image{
+        width:100%;
+        max-width:100%;
+      }
+
+      .cta-phone{
+        width:auto;
+        max-width:100%;
+        font-size:clamp(22px,7vw,36px);
       }
     }
   </style>
@@ -248,9 +297,9 @@
     <div class="wrap">
 
       <img
+        class="logo"
         src="/images/350by350a-green-ride.jpg"
         alt="Green Ride logo"
-        style="width:120px;height:auto"
       >
 
       <h1 class="title title--xxl" style="margin-top:10px">
@@ -337,9 +386,9 @@
     <div class="wrap">
 
       <img
+        class="zone-image"
         src="https://greenride.net/images/zone-x.png"
         alt="San Diego Airport curbside zone sign"
-        style="max-width:650px"
       >
 
       <p class="lead" style="margin-top:10px">
@@ -461,9 +510,9 @@
       </p>
 
       <img
+        class="zone-image"
         src="https://greenride.net/images/zone-x.png"
         alt="San Diego Airport curbside zone signs"
-        style="max-width:650px;margin-top:20px"
       >
 
     </div>
@@ -499,9 +548,9 @@
     <div class="wrap">
 
       <img
+        class="vehicle-image"
         src="/images/car-service-san-diego.jpg"
         alt="Green Ride San Diego airport car service"
-        style="max-width:950px"
       >
 
     </div>
@@ -515,7 +564,7 @@
         Important Notes
       </h2>
 
-      <ul class="checklist" style="max-width:950px">
+      <ul class="checklist">
 
         <li>
           All tolls and parking fees are additional.
