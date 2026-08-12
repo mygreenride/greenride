@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Diego Airport Flat Rates | Green Ride</title>
+<meta name="description" content="Search Green Ride San Diego airport flat rates by area or ZIP code. Call 619-200-2060 or 800-893-7210.">
+<link rel="icon" href="https://greenride.net/favicon.ico">
+<style>
+:root {
+  --black:#000000;
+  --yellow:#f1c40f;
+  --yellow2:#ffcc00;
+  --white:#ffffff;
+  --line:#2a2a2a;
+  --max:1100px;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--yellow);
+  color:#000;
+}
+a { color:inherit; }
+img { max-width:100%; height:auto; display:block; }
+
+.hero {
+  background:var(--black);
+  color:var(--yellow);
+  text-align:center;
+  padding:18px 14px 34px;
+  border-bottom:4px solid var(--yellow);
+}
+.hero-inner {
+  max-width:var(--max);
+  margin:0 auto;
+}
+.logo {
+  width:86px;
+  margin:0 auto 8px;
+}
+.hero h1 {
+  margin:0 auto 4px;
+  max-width:850px;
+  font-size:clamp(2rem,5vw,3.45rem);
+  line-height:.95;
+  font-weight:900;
+}
+.hero .tagline {
+  margin:10px auto 14px;
+  max-width:780px;
+  font-size:clamp(1rem,2vw,1.2rem);
+}
+.call-grid {
+  display:grid;
+  gap:0;
+  justify-content:center;
+  margin:10px auto 12px;
+}
+.call-grid a {
+  display:block;
+  color:var(--yellow);
+  text-decoration:none;
+  font-weight:900;
+  border:2px solid var(--yellow);
+  border-radius:10px;
+  padding:10px 24px;
+  font-size:clamp(1.65rem,5vw,3.2rem);
+  min-width:min(95vw,665px);
+}
+.call-grid a + a {
+  margin-top:0;
+}
+.quote-btn {
+  display:inline-block;
+  margin-top:10px;
+  color:var(--yellow);
+  border:2px solid var(--yellow);
+  border-radius:8px;
+  padding:10px 18px;
+  text-decoration:none;
+  font-weight:800;
+}
+
+.single-nav {
+  background:var(--yellow);
+  border-bottom:4px solid var(--black);
+}
+.single-nav .nav-inner {
+  max-width:var(--max);
+  margin:auto;
+  padding:10px 12px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+}
+.single-nav a {
+  background:var(--yellow);
+  color:#000;
+  border:2px solid #000;
+  border-radius:8px;
+  padding:10px 16px;
+  text-decoration:none;
+  font-weight:800;
+}
+.single-nav a:hover {
+  background:#000;
+  color:var(--yellow);
+}
+
+.main {
+  max-width:var(--max);
+  margin:0 auto;
+  padding:26px 14px 42px;
+}
+.vehicle {
+  max-width:430px;
+  margin:0 auto 20px;
+  border:3px solid #000;
+}
+.search-panel {
+  background:#000;
+  color:var(--yellow);
+  border:3px solid #000;
+  border-radius:12px;
+  padding:18px;
+  box-shadow:0 3px 0 rgba(0,0,0,.2);
+}
+.search-panel h2 {
+  margin:0 0 4px;
+  font-size:clamp(1.6rem,4vw,2.3rem);
+}
+.search-panel p {
+  margin:0 0 12px;
+  color:#fff;
+}
+.search-row {
+  display:flex;
+  gap:8px;
+}
+#search {
+  flex:1;
+  min-width:0;
+  border:3px solid var(--yellow);
+  background:#fff;
+  color:#000;
+  border-radius:8px;
+  padding:13px 14px;
+  font-size:1.05rem;
+  font-weight:700;
+}
+#clearBtn {
+  border:3px solid var(--yellow);
+  background:var(--yellow);
+  color:#000;
+  border-radius:8px;
+  padding:0 18px;
+  font-weight:900;
+  cursor:pointer;
+}
+.status {
+  margin:12px 2px 12px;
+  font-weight:900;
+  font-size:1.05rem;
+}
+
+.table-wrap {
+  border:3px solid #000;
+  border-radius:10px;
+  overflow:auto;
+  background:#fff;
+}
+table {
+  width:100%;
+  border-collapse:collapse;
+  min-width:620px;
+}
+thead th {
+  background:#000;
+  color:var(--yellow);
+  padding:13px 12px;
+  text-align:left;
+  font-size:1rem;
+  cursor:pointer;
+  position:sticky;
+  top:0;
+  z-index:2;
+}
+tbody td {
+  padding:11px 12px;
+  border-bottom:1px solid #cfcfcf;
+}
+tbody tr:nth-child(even) {
+  background:#fff8d7;
+}
+tbody tr:hover {
+  background:#ffe66d;
+}
+.rate {
+  font-weight:900;
+  font-size:1.08rem;
+}
+.mobile-cards {
+  display:none;
+}
+.card {
+  border:3px solid #000;
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:11px;
+  background:#fff;
+}
+.card-area {
+  background:#000;
+  color:var(--yellow);
+  font-weight:900;
+  font-size:1.08rem;
+  padding:11px 12px;
+}
+.card-meta {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.card-rate {
+  background:var(--yellow);
+  font-weight:900;
+  padding:11px 12px;
+}
+.card-zip {
+  padding:11px 12px;
+  text-align:right;
+  font-weight:700;
+}
+.disclaimer {
+  margin-top:16px;
+  background:#000;
+  color:#fff;
+  border:3px solid #000;
+  border-radius:10px;
+  padding:14px 16px;
+}
+.disclaimer strong {
+  color:var(--yellow);
+}
+footer {
+  background:#000;
+  color:var(--yellow);
+  text-align:center;
+  padding:18px 12px;
+  font-weight:800;
+}
+
+@media (max-width:700px) {
+  .hero { padding-top:12px; }
+  .logo { width:72px; }
+  .call-grid a {
+    min-width:100%;
+    font-size:clamp(1.55rem,8vw,2.5rem);
+  }
+  .single-nav .nav-inner {
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    justify-content:flex-start;
+    -webkit-overflow-scrolling:touch;
+  }
+  .single-nav a {
+    white-space:nowrap;
+  }
+  .main {
+    padding:18px 10px 30px;
+  }
+  .vehicle {
+    max-width:92%;
+  }
+  .search-row {
+    flex-direction:column;
+  }
+  #clearBtn {
+    padding:10px 14px;
+  }
+  .table-wrap {
+    display:none;
+  }
+  .mobile-cards {
+    display:block;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <img class="logo" src="https://greenride.net/images/350by350a-green-ride.jpg" alt="Green Ride">
+    <h1>San Diego Airport Flat Rates</h1>
+    <p class="tagline">Reliable door-to-door transportation for San Diego Airport, LAX, and destinations throughout Southern California.</p>
+
+    <div class="call-grid">
+      <a href="tel:16192002060">Call: 619-200-2060</a>
+      <a href="tel:18008937210">Toll-Free: 800-893-7210</a>
+    </div>
+
+    <a class="quote-btn" href="https://greenride.net/makereservation.html">Get a Quote / Book Now</a>
+  </div>
+</header>
+
+<nav class="single-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="https://greenride.net/">Home</a>
+    <a href="https://greenride.net/curbside-.html">Curbside</a>
+    <a href="#rates">Airport Rates</a>
+    <a href="https://greenride.net/terms_and_conditions.html">Policy</a>
+    <a href="https://greenride.net/aboutus.html">About</a>
+    <a href="https://greenride.net/contact-2.html">Contact</a>
+  </div>
+</nav>
+
+<main class="main" id="rates">
+
+  <img class="vehicle"
+       src="https://greenride.net/$2/car-service-san-diego.png"
+       alt="Green Ride San Diego airport transportation vehicle">
+
+  <section class="search-panel">
+    <h2>Find Your Flat Rate</h2>
+    <p>Search by neighborhood, city, destination, or ZIP code.</p>
+    <div class="search-row">
+      <input id="search" type="search" placeholder="Example: La Jolla, Alpine, 92101..." autocomplete="off">
+      <button id="clearBtn" type="button">Clear</button>
+    </div>
+  </section>
+
+  <div class="status" id="status"></div>
+
+  <div class="table-wrap">
+    <table aria-label="Green Ride airport flat rates">
+      <thead>
+        <tr>
+          <th data-sort="area">Name of Area ↕</th>
+          <th data-sort="rate">Cash Rate ↕</th>
+          <th data-sort="zip">ZIP Code ↕</th>
+        </tr>
+      </thead>
+      <tbody id="rateBody"></tbody>
+    </table>
+  </div>
+
+  <div class="mobile-cards" id="mobileCards"></div>
+
+  <div class="disclaimer">
+    <strong>Please note:</strong> Listed rates are based on the Green Ride rate sheet. Tolls, parking, waiting time, gratuity, and other applicable charges may be additional under Green Ride policies. Call to confirm availability and the current rate before travel.
+  </div>
+</main>
+
+<footer>
+  GreenRide.net &nbsp;•&nbsp; PSC-TCP-17591-P
+</footer>
+
+<script>
+const rates = [{"area": "32nd Street (Naval Station)", "rate": "$31.00", "zip": "92136"}, {"area": "4S Ranch", "rate": "$74.00", "zip": "92127"}, {"area": "Agua Caliente", "rate": "$325.00", "zip": "92086"}, {"area": "Agua Caliente Hot Springs", "rate": "$341.00", "zip": "92036"}, {"area": "Allied Gardens", "rate": "$41.00", "zip": "92120"}, {"area": "Alpine", "rate": "$84.00", "zip": "91903"}, {"area": "Alpine Heights", "rate": "$84.00", "zip": "91901"}, {"area": "Alta Vista", "rate": "$41.00", "zip": "92114"}, {"area": "Amphib Base USN", "rate": "$41.00", "zip": "92155"}, {"area": "Anaheim", "rate": "$325.00", "zip": "92805"}, {"area": "Balboa Park", "rate": "$33.00", "zip": "92134"}, {"area": "Ball Park (Petco)", "rate": "$31.00", "zip": "92101"}, {"area": "Ballena", "rate": "$150.00", "zip": "92065"}, {"area": "Bankhead Springs", "rate": "$325.00", "zip": "92754"}, {"area": "Banner", "rate": "$325.00", "zip": "92036"}, {"area": "Barona Casino", "rate": "$74.00", "zip": "92040"}, {"area": "Barona Mesa", "rate": "$150.00", "zip": "92065"}, {"area": "Barona Valley Ranch Resort & Casino", "rate": "$74.00", "zip": "92040"}, {"area": "Barrett Junction", "rate": "$150.00", "zip": "91917"}, {"area": "Barrio Logan", "rate": "$41.00", "zip": "92113"}, {"area": "Bay Park", "rate": "$41.00", "zip": "92110"}, {"area": "Bear Valley (Escondido)", "rate": "$150.00", "zip": "92027"}, {"area": "Birch Hill", "rate": "$325.00", "zip": "92060"}, {"area": "Blossom Valley", "rate": "$74.00", "zip": "92021"}, {"area": "Bonita", "rate": "$51.00", "zip": "91902"}, {"area": "Bonita (PO Box)", "rate": "$51.00", "zip": "91908"}, {"area": "Bonsall", "rate": "$150.00", "zip": "92003"}, {"area": "Borrego Springs", "rate": "$341.00", "zip": "92004"}, {"area": "Borrego Wells", "rate": "$341.00", "zip": "92004"}, {"area": "Bostonia", "rate": "$61.00", "zip": "92021"}, {"area": "Boulder Oaks", "rate": "$113.00", "zip": "91962"}, {"area": "Boulevard", "rate": "$325.00", "zip": "91905"}, {"area": "Brea", "rate": "$325.00", "zip": "92821"}, {"area": "Broadway Heights", "rate": "$41.00", "zip": "92114"}, {"area": "Buckman Springs", "rate": "$113.00", "zip": "91962"}, {"area": "Buena", "rate": "$150.00", "zip": "92083"}, {"area": "Burbank Airport Bob Hope/ (BUR)", "rate": "$341.00", "zip": "91504"}, {"area": "Calexico", "rate": "$325.00", "zip": "92231"}, {"area": "Cameron Corners", "rate": "$113.00", "zip": "91906"}, {"area": "Camp Pendleton (Area 52)", "rate": "$141.00", "zip": "92055"}, {"area": "Campo", "rate": "$113.00", "zip": "92036"}, {"area": "Canebrake", "rate": "$325.00", "zip": "92036"}, {"area": "Canyon City", "rate": "$113.00", "zip": "91906"}, {"area": "Capistrano Beach", "rate": "$325.00", "zip": "92624"}, {"area": "Cardiff-by-the-Sea", "rate": "$71.00", "zip": "92007"}, {"area": "Carlsbad", "rate": "$81.00", "zip": "92008"}, {"area": "Carlsbad", "rate": "$81.00", "zip": "92009"}, {"area": "Carlsbad", "rate": "$81.00", "zip": "92010"}, {"area": "Carlsbad", "rate": "$81.00", "zip": "92011"}, {"area": "Carlsbad", "rate": "$81.00", "zip": "92013"}, {"area": "Carlsbad", "rate": "$81.00", "zip": "92018"}, {"area": "Carmel Mtn Ranch", "rate": "$74.00", "zip": "92128"}, {"area": "Carmel Valley (E of Carmel Country rd)", "rate": "$74.00", "zip": "92130"}, {"area": "Carmel Valley (W of Carmel Country rd)", "rate": "$54.00", "zip": "92130"}, {"area": "Casa de Oro", "rate": "$51.00", "zip": "91977"}, {"area": "Castle Park", "rate": "$61.00", "zip": "91911"}, {"area": "Centre City", "rate": "$31.00", "zip": "92101"}, {"area": "Chollas Creek", "rate": "$44.00", "zip": "92105"}, {"area": "Chollas View", "rate": "$41.00", "zip": "92102"}, {"area": "Chula Vista", "rate": "$61.00", "zip": "91911"}, {"area": "Chula Vista", "rate": "$44.00", "zip": "91912"}, {"area": "Chula Vista", "rate": "$61.00", "zip": "91914"}, {"area": "Chula Vista (East of HWY 805)", "rate": "$54.00", "zip": "91910"}, {"area": "Chula Vista (East of Otay Lakes Rd)", "rate": "$54.00", "zip": "91913"}, {"area": "Chula Vista (PO Box)", "rate": "$44.00", "zip": "91909"}, {"area": "Chula Vista (PO Box)", "rate": "$61.00", "zip": "91921"}, {"area": "Chula Vista (West of HWY 805)", "rate": "$51.00", "zip": "91910"}, {"area": "Chula Vista (West of Otay Lakes Rd)", "rate": "$61.00", "zip": "91913"}, {"area": "Chula Vista South (L.St.S)", "rate": "$61.00", "zip": "91915"}, {"area": "City Heights", "rate": "$44.00", "zip": "92105"}, {"area": "Clairmont East (Balboa N)", "rate": "$41.00", "zip": "92117"}, {"area": "Clairmont West (Balboa S)", "rate": "$41.00", "zip": "92117"}, {"area": "Clairmont/Linda Vista (Lower)", "rate": "$41.00", "zip": "92111"}, {"area": "Clairmont/Linda Vista (Upper)", "rate": "$41.00", "zip": "92111"}, {"area": "Combs Camp", "rate": "$341.00", "zip": "92004"}, {"area": "Corona", "rate": "$341.00", "zip": "92882"}, {"area": "Corona Airport", "rate": "$341.00", "zip": "92880"}, {"area": "Coronado", "rate": "$41.00", "zip": "92118"}, {"area": "Coronado (South)", "rate": "$41.00", "zip": "92118"}, {"area": "Coronado Cays", "rate": "$51.00", "zip": "92118"}, {"area": "Crest", "rate": "$74.00", "zip": "92021"}, {"area": "Crown Point", "rate": "$41.00", "zip": "92109"}, {"area": "Cruiseship Terminal", "rate": "$33.00", "zip": "92101"}, {"area": "Cuyamaca", "rate": "$325.00", "zip": "92036"}, {"area": "Dana Point", "rate": "$325.00", "zip": "92629"}, {"area": "De Luz", "rate": "$325.00", "zip": "92028"}, {"area": "Dehesa", "rate": "$74.00", "zip": "92019"}, {"area": "Del Cerro", "rate": "$41.00", "zip": "92120"}, {"area": "Del Dios", "rate": "$84.00", "zip": "92029"}, {"area": "Del Mar", "rate": "$61.00", "zip": "92014"}, {"area": "Del Mar Fairgrounds", "rate": "$150.00", "zip": "92014"}, {"area": "Del Mar Horse Racing", "rate": "$150.00", "zip": "92014"}, {"area": "Del Mar Race Track", "rate": "$150.00", "zip": "92014"}, {"area": "Del Mar Traffice Delays", "rate": "$150.00", "zip": "92014"}, {"area": "Descanso", "rate": "$113.00", "zip": "91916"}, {"area": "Descanso Junction", "rate": "$150.00", "zip": "91916"}, {"area": "Desert Lodge", "rate": "$341.00", "zip": "92004"}, {"area": "Disneyland", "rate": "$325.00", "zip": "92802"}, {"area": "Downtown", "rate": "$31.00", "zip": "92101"}, {"area": "Dulzura", "rate": "$84.00", "zip": "91917"}, {"area": "Eagles Nest", "rate": "$325.00", "zip": "92086"}, {"area": "East Elliott", "rate": "$41.00", "zip": "92145"}, {"area": "East Lake", "rate": "$61.00", "zip": "91915"}, {"area": "East Los Angeles", "rate": "$341.00", "zip": "90022"}, {"area": "East San Diego (Between 40th-54th)", "rate": "$44.00", "zip": "92105"}, {"area": "East San Diego (Between 54th-70th)", "rate": "$51.00", "zip": "92105"}, {"area": "East San Diego (Between i805-i15)", "rate": "$44.00", "zip": "92105"}, {"area": "Eastlake Greens", "rate": "$61.00", "zip": "91915"}, {"area": "Echo Dell", "rate": "$113.00", "zip": "91916"}, {"area": "Eden Gardens", "rate": "$61.00", "zip": "92075"}, {"area": "El Cajon", "rate": "$74.00", "zip": "92019"}, {"area": "El Cajon", "rate": "$61.00", "zip": "92020"}, {"area": "El Cajon", "rate": "$74.00", "zip": "92021"}, {"area": "El Cajon (PO Box)", "rate": "$61.00", "zip": "92022"}, {"area": "El Cajon Travel Lodge", "rate": "$74.00", "zip": "92090"}, {"area": "El Centro", "rate": "$325.00", "zip": "92244"}, {"area": "Embarcadero (North) Ash", "rate": "$31.00", "zip": "92101"}, {"area": "Embarcadero (South) Ash", "rate": "$31.00", "zip": "92101"}, {"area": "Emerald Hills", "rate": "$41.00", "zip": "92114"}, {"area": "Encanto", "rate": "$41.00", "zip": "92114"}, {"area": "Encinitas", "rate": "$71.00", "zip": "92023"}, {"area": "Encinitas", "rate": "$71.00", "zip": "92024"}, {"area": "Engineer Springs", "rate": "$84.00", "zip": "91917"}, {"area": "Escondido", "rate": "$84.00", "zip": "92025"}, {"area": "Escondido", "rate": "$91.00", "zip": "92030"}, {"area": "Escondido", "rate": "$84.00", "zip": "92033"}, {"area": "Escondido", "rate": "$84.00", "zip": "92046"}, {"area": "Eucalyptus Hills", "rate": "$84.00", "zip": "92040"}, {"area": "Fairbanks Country Club", "rate": "$84.00", "zip": "92130"}, {"area": "Fairbanks Ranch", "rate": "$84.00", "zip": "92067"}, {"area": "Fallbrook", "rate": "$141.00", "zip": "92028"}, {"area": "Fallbrook", "rate": "$113.00", "zip": "92088"}, {"area": "Fernbrook", "rate": "$150.00", "zip": "92065"}, {"area": "Fleetridge", "rate": "$33.00", "zip": "92106"}, {"area": "Fletcher Hills", "rate": "$61.00", "zip": "92020"}, {"area": "Flinn Springs", "rate": "$74.00", "zip": "92021"}, {"area": "Foster", "rate": "$84.00", "zip": "92040"}, {"area": "Fulerton", "rate": "$325.00", "zip": "92831"}, {"area": "Garden Grove", "rate": "$325.00", "zip": "92840"}, {"area": "Gaslamp", "rate": "$31.00", "zip": "92101"}, {"area": "Glen Oaks", "rate": "$81.00", "zip": "91901"}, {"area": "Glenview", "rate": "$74.00", "zip": "92021"}, {"area": "Golden Hills", "rate": "$41.00", "zip": "92102"}, {"area": "Grant Hill", "rate": "$41.00", "zip": "92102"}, {"area": "Grantville", "rate": "$41.00", "zip": "92120"}, {"area": "Green Valley Falls", "rate": "$113.00", "zip": "91916"}, {"area": "Grossmont", "rate": "$51.00", "zip": "91942"}, {"area": "Guatay", "rate": "$150.00", "zip": "92751"}, {"area": "Harbison Canyon", "rate": "$81.00", "zip": "92019"}, {"area": "Harmony Grove", "rate": "$91.00", "zip": "92029"}, {"area": "Harrah's Rincon Casino", "rate": "$125.00", "zip": "92082"}, {"area": "Harrison Park", "rate": "$325.00", "zip": "92036"}, {"area": "Hemet", "rate": "$325.00", "zip": "92544"}, {"area": "Hidden Glen", "rate": "$150.00", "zip": "91901"}, {"area": "Hidden Meadows", "rate": "$150.00", "zip": "92026"}, {"area": "Hillcrest (North)", "rate": "$33.00", "zip": "92103"}, {"area": "Hillcrest (South of Upas St)", "rate": "$31.00", "zip": "92103"}, {"area": "Hillcrest (South)", "rate": "$33.00", "zip": "92103"}, {"area": "Hillcrest (West of Park Blvd)", "rate": "$31.00", "zip": "92103"}, {"area": "Holcomb Village", "rate": "$325.00", "zip": "92086"}, {"area": "Hotel Circle", "rate": "$36.00", "zip": "92108"}, {"area": "Hulburd Grove", "rate": "$150.00", "zip": "91916"}, {"area": "Huntington Beach", "rate": "$325.00", "zip": "92648"}, {"area": "Imperial Beach", "rate": "$61.00", "zip": "92752"}, {"area": "Imperial Beach (PO Box)", "rate": "$51.00", "zip": "92753"}, {"area": "Indian Springs", "rate": "$61.00", "zip": "92755"}, {"area": "Irvine", "rate": "$325.00", "zip": "92614"}, {"area": "Irving's Crest", "rate": "$150.00", "zip": "92065"}, {"area": "Jacumba", "rate": "$325.00", "zip": "92754"}, {"area": "Jamacha (SD)", "rate": "$61.00", "zip": "92114"}, {"area": "Jamacha (SDCO)", "rate": "$61.00", "zip": "92755"}, {"area": "Jamul", "rate": "$74.00", "zip": "92755"}, {"area": "Jesmond Dene", "rate": "$150.00", "zip": "92026"}, {"area": "John Wayne Airport (SNA)", "rate": "$325.00", "zip": "92707"}, {"area": "Johnstown", "rate": "$74.00", "zip": "92021"}, {"area": "Julian", "rate": "$325.00", "zip": "92036"}, {"area": "Kearny Mesa", "rate": "$41.00", "zip": "92123"}, {"area": "Kearny Mesa (Lower)", "rate": "$41.00", "zip": "92111"}, {"area": "Kearny Mesa (Upper)", "rate": "$41.00", "zip": "92111"}, {"area": "Kensington", "rate": "$41.00", "zip": "92116"}, {"area": "Kentwood in the Pines", "rate": "$325.00", "zip": "92036"}, {"area": "Knott's Berry Farm", "rate": "$325.00", "zip": "90620"}, {"area": "La Costa", "rate": "$84.00", "zip": "92009"}, {"area": "La Jolla (PO Box)", "rate": "$44.00", "zip": "92038"}, {"area": "La Jolla (PO Box)", "rate": "$44.00", "zip": "92039"}, {"area": "La Jolla Amago", "rate": "$141.00", "zip": "92060"}, {"area": "La Jolla Cove", "rate": "$51.00", "zip": "92037"}, {"area": "La Jolla Mount Soledad", "rate": "$51.00", "zip": "92037"}, {"area": "La Jolla North", "rate": "$51.00", "zip": "92092"}, {"area": "La Jolla Shores", "rate": "$51.00", "zip": "92037"}, {"area": "La Jolla South", "rate": "$51.00", "zip": "92037"}, {"area": "La Mesa (East of 125)", "rate": "$54.00", "zip": "91941"}, {"area": "La Mesa (PO Box)", "rate": "$51.00", "zip": "91943"}, {"area": "La Mesa (PO Box)", "rate": "$51.00", "zip": "91944"}, {"area": "La Mesa (West of 125)", "rate": "$51.00", "zip": "91941"}, {"area": "La Playa", "rate": "$33.00", "zip": "92106"}, {"area": "La Presa", "rate": "$51.00", "zip": "91977"}, {"area": "Laguna Beach", "rate": "$325.00", "zip": "92651"}, {"area": "Laguna Niguel", "rate": "$325.00", "zip": "92677"}, {"area": "Lake Elsinore", "rate": "$325.00", "zip": "92530"}, {"area": "Lake Forest", "rate": "$325.00", "zip": "92630"}, {"area": "Lake Henshaw", "rate": "$325.00", "zip": "92070"}, {"area": "Lakeside", "rate": "$74.00", "zip": "92040"}, {"area": "Lakeview", "rate": "$74.00", "zip": "92040"}, {"area": "Las Vegas", "rate": "$653.00", "zip": "89104"}, {"area": "LAX (Los Angeles Airport)", "rate": "$325.00", "zip": "90045"}, {"area": "Legoland", "rate": "$81.00", "zip": "92009"}, {"area": "Lemon Grove", "rate": "$44.00", "zip": "91945"}, {"area": "Lemon Grove (PO Box)", "rate": "$44.00", "zip": "91946"}, {"area": "Leucadia", "rate": "$71.00", "zip": "92024"}, {"area": "Lincoln Acres (PO Box)", "rate": "$44.00", "zip": "91947"}, {"area": "Lincoln Acres (PO Box)", "rate": "$33.00", "zip": "92147"}, {"area": "Lincoln Park", "rate": "$41.00", "zip": "92102"}, {"area": "Linda Vista (Lower)", "rate": "$41.00", "zip": "92111"}, {"area": "Linda Vista (Upper)", "rate": "$41.00", "zip": "92111"}, {"area": "Linda Vista/Clairmont (Lower)", "rate": "$37.00", "zip": "92111"}, {"area": "Linda Vista/Clairmont (Upper)", "rate": "$37.00", "zip": "92111"}, {"area": "Live Oak Springs", "rate": "$325.00", "zip": "92028"}, {"area": "Logan Heights", "rate": "$41.00", "zip": "92113"}, {"area": "Loma Partal", "rate": "$33.00", "zip": "92110"}, {"area": "Lomas Santa Fe", "rate": "$61.00", "zip": "92075"}, {"area": "Lomita", "rate": "$51.00", "zip": "92114"}, {"area": "Long Beach", "rate": "$325.00", "zip": "90802"}, {"area": "Long Beach Airport", "rate": "$325.00", "zip": "90802"}, {"area": "Lynwood Hills", "rate": "$44.00", "zip": "91910"}, {"area": "Magic Mountain", "rate": "$298.00", "zip": "91355"}, {"area": "Magic Mountain Parkway", "rate": "$298.00", "zip": "91355"}, {"area": "Manzanita", "rate": "$325.00", "zip": "91905"}, {"area": "Memorial", "rate": "$41.00", "zip": "92113"}, {"area": "Mesa Grande", "rate": "$325.00", "zip": "92070"}, {"area": "Middletown", "rate": "$33.00", "zip": "92103"}, {"area": "Midway", "rate": "$33.00", "zip": "92106"}, {"area": "Mira Mesa", "rate": "$54.00", "zip": "92126"}, {"area": "Miramar", "rate": "$51.00", "zip": "92126"}, {"area": "Miramar Ranch N", "rate": "$61.00", "zip": "92131"}, {"area": "Mission Bay (South of El Carmel Pl)", "rate": "$41.00", "zip": "92109"}, {"area": "Mission Beach (South of El Carmel Pl)", "rate": "$41.00", "zip": "92109"}, {"area": "Mission Hills", "rate": "$33.00", "zip": "92103"}, {"area": "Mission Valley (Btwn Hwy 15 & MGR.)", "rate": "$51.00", "zip": "92108"}, {"area": "Mission Valley (Btwn Hwy 15 & Texas)", "rate": "$41.00", "zip": "92108"}, {"area": "Mission Valley (Btwn Hwy 275 & Texas)", "rate": "$41.00", "zip": "92108"}, {"area": "Mission Valley (Btwn Hwy 5 & 275)", "rate": "$36.00", "zip": "92108"}, {"area": "Mission Viejo", "rate": "$325.00", "zip": "92691"}, {"area": "Mission Village", "rate": "$41.00", "zip": "92123"}, {"area": "Morena Village", "rate": "$325.00", "zip": "91906"}, {"area": "Moreno", "rate": "$74.00", "zip": "92040"}, {"area": "Morettis", "rate": "$325.00", "zip": "92070"}, {"area": "Mount Helix", "rate": "$54.00", "zip": "91941"}, {"area": "Mount Hope", "rate": "$44.00", "zip": "92102"}, {"area": "Mount Laguna", "rate": "$325.00", "zip": "91948"}, {"area": "Mountain View", "rate": "$41.00", "zip": "92113"}, {"area": "Murrieta", "rate": "$325.00", "zip": "92562"}, {"area": "National City", "rate": "$44.00", "zip": "91950"}, {"area": "National City (PO Box)", "rate": "$44.00", "zip": "91951"}, {"area": "National City (PO Box)", "rate": "$37.00", "zip": "92151"}, {"area": "Navajo", "rate": "$71.00", "zip": "92120"}, {"area": "Nestor/Otay Mesa/Palm City/TJ Rr Vy", "rate": "$54.00", "zip": "92154"}, {"area": "Nestor/Otay Mesa/Palm City/TJ Rr Vy", "rate": "$54.00", "zip": "92154"}, {"area": "Nestor/Otay Mesa/Palm City/TJ Rr Vy", "rate": "$61.00", "zip": "92154"}, {"area": "Nestor/Otay Mesa/Palm City/TJ Rr Vy", "rate": "$71.00", "zip": "92154"}, {"area": "Nestor/Otay Mesa/Palm City/TJ Rr Vy", "rate": "$74.00", "zip": "92154"}, {"area": "Nestor/Otay Mesa/Palm City/TJ Rr Vy", "rate": "$81.00", "zip": "92154"}, {"area": "Nestor/Otay Mesa/Palm City/TJ Rr Vy", "rate": "$84.00", "zip": "92154"}, {"area": "Newport Beach", "rate": "$325.00", "zip": "92625"}, {"area": "Norco", "rate": "$178.00", "zip": "92860"}, {"area": "Normal Heights", "rate": "$34.00", "zip": "92116"}, {"area": "North Bay Terraces", "rate": "$54.00", "zip": "92114"}, {"area": "North Clairemont", "rate": "$41.00", "zip": "92197"}, {"area": "North Encanto", "rate": "$54.00", "zip": "92114"}, {"area": "North Island", "rate": "$41.00", "zip": "92135"}, {"area": "North Jamul", "rate": "$74.00", "zip": "92755"}, {"area": "North Park (PARK BLVD – I805)", "rate": "$41.00", "zip": "92104"}, {"area": "Oak Grove", "rate": "$325.00", "zip": "92086"}, {"area": "Oak Park", "rate": "$54.00", "zip": "92105"}, {"area": "Ocean Beach (East of Nimitz)", "rate": "$31.00", "zip": "92107"}, {"area": "Ocean Beach (West of Nimitz)", "rate": "$31.00", "zip": "92107"}, {"area": "Oceanside", "rate": "$91.00", "zip": "92049"}, {"area": "Oceanside", "rate": "$91.00", "zip": "92051"}, {"area": "Oceanside", "rate": "$150.00", "zip": "92052"}, {"area": "Oceanside", "rate": "$113.00", "zip": "92054"}, {"area": "Oceanside", "rate": "$150.00", "zip": "92056"}, {"area": "Oceanside", "rate": "$150.00", "zip": "92057"}, {"area": "Oceanside", "rate": "$150.00", "zip": "92058"}, {"area": "Ocotillo Wells", "rate": "$341.00", "zip": "92004"}, {"area": "Old Town", "rate": "$31.00", "zip": "92110"}, {"area": "Olivenhain", "rate": "$74.00", "zip": "92024"}, {"area": "Ontario International (ONT),", "rate": "$325.00", "zip": "91761"}, {"area": "Ontario International (ONT),", "rate": "$325.00", "zip": "91764"}, {"area": "Otay", "rate": "$84.00", "zip": "91911"}, {"area": "Otay Border", "rate": "$84.00", "zip": "92275"}, {"area": "Pacific Beach  (N of El Carmel)", "rate": "$41.00", "zip": "92109"}, {"area": "Pala", "rate": "$341.00", "zip": "92059"}, {"area": "Pala Mesa Village", "rate": "$325.00", "zip": "92028"}, {"area": "Palm Springs", "rate": "$325.00", "zip": "92262"}, {"area": "Palo Verde", "rate": "$150.00", "zip": "91901"}, {"area": "Palomar Mountain", "rate": "$325.00", "zip": "92060"}, {"area": "Paradise Hills", "rate": "$54.00", "zip": "92139"}, {"area": "Paso Picacho", "rate": "$325.00", "zip": "92036"}, {"area": "Pauma Valley", "rate": "$113.00", "zip": "92061"}, {"area": "Pechanga Resort & Casino", "rate": "$141.00", "zip": "92592"}, {"area": "Peninsula", "rate": "$33.00", "zip": "92106"}, {"area": "Perris", "rate": "$325.00", "zip": "92570"}, {"area": "Petco (Ball Park)", "rate": "$31.00", "zip": "92101"}, {"area": "Pine Hills", "rate": "$325.00", "zip": "92036"}, {"area": "Pine Valley", "rate": "$150.00", "zip": "91962"}, {"area": "Point Loma", "rate": "$33.00", "zip": "92106"}, {"area": "Point Loma (Sports Arena)", "rate": "$31.00", "zip": "92106"}, {"area": "Point Loma (Sports Arena)", "rate": "$31.00", "zip": "92110"}, {"area": "Point Loma (Submarine Base)", "rate": "$33.00", "zip": "92106"}, {"area": "Point Loma Nazarene University", "rate": "$33.00", "zip": "92106"}, {"area": "Port of San Diego", "rate": "$33.00", "zip": "92101"}, {"area": "Potrero", "rate": "$150.00", "zip": "91963"}, {"area": "Potrero", "rate": "$150.00", "zip": "91990"}, {"area": "Poway", "rate": "$74.00", "zip": "92064"}, {"area": "Poway", "rate": "$74.00", "zip": "92074"}, {"area": "Puerta La Cruz", "rate": "$325.00", "zip": "92086"}, {"area": "Qualcomm Stadium", "rate": "$51.00", "zip": "92108"}, {"area": "Rainbow", "rate": "$325.00", "zip": "92028"}, {"area": "Ramona", "rate": "$150.00", "zip": "92065"}, {"area": "Ranchita", "rate": "$325.00", "zip": "92066"}, {"area": "Rancho Bernardo", "rate": "$74.00", "zip": "92127"}, {"area": "Rancho Bernardo", "rate": "$74.00", "zip": "92128"}, {"area": "Rancho Bernardo", "rate": "$74.00", "zip": "92199"}, {"area": "Rancho Del Rey", "rate": "$54.00", "zip": "91910"}, {"area": "Rancho Palo Verde", "rate": "$150.00", "zip": "91901"}, {"area": "Rancho Penasquitos (E. BLK MT)", "rate": "$54.00", "zip": "92129"}, {"area": "Rancho Penasquitos (W. BLK MT)", "rate": "$74.00", "zip": "92129"}, {"area": "Rancho San Diego", "rate": "$54.00", "zip": "91978"}, {"area": "Rancho Santa Fe", "rate": "$74.00", "zip": "92067"}, {"area": "Rancho Santa Fe", "rate": "$74.00", "zip": "92091"}, {"area": "Rincon", "rate": "$150.00", "zip": "92082"}, {"area": "Rincon Harrah's Casino", "rate": "$125.00", "zip": "92082"}, {"area": "Rock Haven", "rate": "$150.00", "zip": "92065"}, {"area": "Rolando", "rate": "$51.00", "zip": "92115"}, {"area": "Rosemont", "rate": "$150.00", "zip": "92065"}, {"area": "Roseville", "rate": "$33.00", "zip": "92106"}, {"area": "Sabre Springs", "rate": "$54.00", "zip": "92128"}, {"area": "San Bernardino Int. Airport", "rate": "$341.00", "zip": "92408"}, {"area": "San Carlos", "rate": "$54.00", "zip": "92119"}, {"area": "San Clemente", "rate": "$113.00", "zip": "92672"}, {"area": "San Clemente", "rate": "$113.00", "zip": "92673"}, {"area": "San Clemente", "rate": "$113.00", "zip": "92674"}, {"area": "San Diego (Downtown)", "rate": "$31.00", "zip": "92101"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92275"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92275"}, {"area": "San Diego (PO Box)", "rate": "$84.00", "zip": "92275"}, {"area": "San Diego (PO Box)", "rate": "$33.00", "zip": "92112"}, {"area": "San Diego (PO Box)", "rate": "$33.00", "zip": "92133"}, {"area": "San Diego (PO Box)", "rate": "$33.00", "zip": "92137"}, {"area": "San Diego (PO Box)", "rate": "$33.00", "zip": "92138"}, {"area": "San Diego (PO Box)", "rate": "$51.00", "zip": "92142"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92149"}, {"area": "San Diego (PO Box)", "rate": "$84.00", "zip": "92150"}, {"area": "San Diego (PO Box)", "rate": "$54.00", "zip": "92159"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92160"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92162"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92164"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92165"}, {"area": "San Diego (PO Box)", "rate": "$33.00", "zip": "92166"}, {"area": "San Diego (PO Box)", "rate": "$33.00", "zip": "92167"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92168"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92169"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92170"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92171"}, {"area": "San Diego (PO Box)", "rate": "$81.00", "zip": "92172"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92174"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92175"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92176"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92177"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92178"}, {"area": "San Diego (PO Box)", "rate": "$33.00", "zip": "92186"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92190"}, {"area": "San Diego (PO Box)", "rate": "$54.00", "zip": "92191"}, {"area": "San Diego (PO Box)", "rate": "$51.00", "zip": "92192"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92194"}, {"area": "San Diego (PO Box)", "rate": "$41.00", "zip": "92195"}, {"area": "San Diego (PO Box)", "rate": "$54.00", "zip": "92196"}, {"area": "San Diego (SD Water Util)", "rate": "$33.00", "zip": "92187"}, {"area": "San Diego (SDG&E)", "rate": "$33.00", "zip": "92184"}, {"area": "San Diego (SDSU)", "rate": "$51.00", "zip": "92182"}, {"area": "San Diego Country Ests", "rate": "$150.00", "zip": "92065"}, {"area": "San Diego County Jail", "rate": "$84.00", "zip": "92158"}, {"area": "San Diego Donovan Corr F", "rate": "$81.00", "zip": "92179"}, {"area": "San Diego Port", "rate": "$33.00", "zip": "92101"}, {"area": "San Diego Qualcomm Stadium", "rate": "$51.00", "zip": "92108"}, {"area": "San Diego State University", "rate": "$51.00", "zip": "92182"}, {"area": "San Diego VA Hospital", "rate": "$54.00", "zip": "92161"}, {"area": "San Diego Wild Animal Park", "rate": "$84.00", "zip": "92027"}, {"area": "San Diego Zoo", "rate": "$33.00", "zip": "92101"}, {"area": "San Felipe", "rate": "$325.00", "zip": "92086"}, {"area": "San Ignacio", "rate": "$325.00", "zip": "92086"}, {"area": "San Juan Capistrano", "rate": "$325.00", "zip": "92675"}, {"area": "San Luis Rey", "rate": "$150.00", "zip": "92054"}, {"area": "San Luis Rey", "rate": "$150.00", "zip": "92068"}, {"area": "San Luis Rey Heights", "rate": "$113.00", "zip": "92028"}, {"area": "San Marcos", "rate": "$150.00", "zip": "92069"}, {"area": "San Marcos", "rate": "$91.00", "zip": "92078"}, {"area": "San Marcos", "rate": "$150.00", "zip": "92079"}, {"area": "San Marcos (Cal St SM)", "rate": "$91.00", "zip": "92096"}, {"area": "San Onofre", "rate": "$113.00", "zip": "92672"}, {"area": "San Pasqual", "rate": "$84.00", "zip": "92025"}, {"area": "San Ysidro", "rate": "$84.00", "zip": "92275"}, {"area": "Santa Barbara Municipal Airport", "rate": "$573.00", "zip": "93117"}, {"area": "Santee", "rate": "$54.00", "zip": "92071"}, {"area": "Santee (PO Box)", "rate": "$54.00", "zip": "92072"}, {"area": "Scissors Crossing", "rate": "$325.00", "zip": "92036"}, {"area": "Scripps Miramar Ranch", "rate": "$54.00", "zip": "92131"}, {"area": "Scripps Ranch", "rate": "$54.00", "zip": "92131"}, {"area": "Sea World", "rate": "$41.00", "zip": "92109"}, {"area": "Serra Mesa", "rate": "$41.00", "zip": "92123"}, {"area": "Shady Dell", "rate": "$150.00", "zip": "92065"}, {"area": "Shelltown", "rate": "$41.00", "zip": "92113"}, {"area": "Shelter Valley Ranchos", "rate": "$325.00", "zip": "92036"}, {"area": "Sherman Heights", "rate": "$44.00", "zip": "92102"}, {"area": "Six Flags Hurricane Harbor", "rate": "$298.00", "zip": "91355"}, {"area": "Skyline", "rate": "$54.00", "zip": "92114"}, {"area": "Solana Beach", "rate": "$61.00", "zip": "92075"}, {"area": "Sorrento Hills", "rate": "$54.00", "zip": "92130"}, {"area": "Sorrento Mesa", "rate": "$61.00", "zip": "92121"}, {"area": "Sorrento Valley", "rate": "$61.00", "zip": "92121"}, {"area": "South Bay Terraces", "rate": "$54.00", "zip": "92139"}, {"area": "South Encanto", "rate": "$54.00", "zip": "92114"}, {"area": "South Oceanside", "rate": "$150.00", "zip": "92054"}, {"area": "South Park", "rate": "$44.00", "zip": "92102"}, {"area": "SPAWAR Spc/Nav War Sys C", "rate": "$33.00", "zip": "92152"}, {"area": "Sports Arena (Midway Area)", "rate": "$31.00", "zip": "92110"}, {"area": "Sports Arena (Point Loma)", "rate": "$33.00", "zip": "92110"}, {"area": "Spring Valley", "rate": "$54.00", "zip": "91977"}, {"area": "Spring Valley", "rate": "$54.00", "zip": "91978"}, {"area": "Spring Valley (PO Box)", "rate": "$54.00", "zip": "91976"}, {"area": "Spring Valley (PO Box)", "rate": "$54.00", "zip": "91979"}, {"area": "Stadium (qualcomm)", "rate": "$51.00", "zip": "92108"}, {"area": "Stockton", "rate": "$44.00", "zip": "92102"}, {"area": "Sunnyside", "rate": "$54.00", "zip": "91902"}, {"area": "Sunshine Summit", "rate": "$325.00", "zip": "92086"}, {"area": "Sycuan Casino", "rate": "$74.00", "zip": "92019"}, {"area": "Talmadge", "rate": "$51.00", "zip": "92115"}, {"area": "Tecate", "rate": "$150.00", "zip": "91980"}, {"area": "Tecate", "rate": "$150.00", "zip": "91987"}, {"area": "Temecula", "rate": "$113.00", "zip": "92590"}, {"area": "Temecula", "rate": "$141.00", "zip": "92592"}, {"area": "The Narrows", "rate": "$325.00", "zip": "92004"}, {"area": "The Willows", "rate": "$150.00", "zip": "91901"}, {"area": "Tierra del Sol", "rate": "$325.00", "zip": "91905"}, {"area": "Tierra Santa", "rate": "$51.00", "zip": "92124"}, {"area": "Tijuana Border", "rate": "$84.00", "zip": "92275"}, {"area": "Torrey Pines", "rate": "$54.00", "zip": "92014"}, {"area": "Torrey Pines", "rate": "$54.00", "zip": "92037"}, {"area": "Torrey Pines", "rate": "$54.00", "zip": "92121"}, {"area": "Torrey Pines", "rate": "$54.00", "zip": "92122"}, {"area": "Torrey Pines", "rate": "$54.00", "zip": "92130"}, {"area": "Twin Oaks", "rate": "$150.00", "zip": "92069"}, {"area": "UCSD", "rate": "$51.00", "zip": "92093"}, {"area": "Universal Studios Hollywood", "rate": "$325.00", "zip": "91608"}, {"area": "University City", "rate": "$51.00", "zip": "92122"}, {"area": "University Heights", "rate": "$41.00", "zip": "92116"}, {"area": "University of California, SD", "rate": "$51.00", "zip": "92093"}, {"area": "University of San Diego", "rate": "$41.00", "zip": "92110"}, {"area": "Uptown", "rate": "$33.00", "zip": "92103"}, {"area": "USD", "rate": "$41.00", "zip": "92110"}, {"area": "USMC Recruit Depot", "rate": "$31.00", "zip": "92140"}, {"area": "USN Amphib Base", "rate": "$51.00", "zip": "92155"}, {"area": "USN N Island", "rate": "$41.00", "zip": "92135"}, {"area": "USN San Diego Bay", "rate": "$41.00", "zip": "92136"}, {"area": "USN Spc/Nav War Sys C", "rate": "$33.00", "zip": "92152"}, {"area": "Valencia Park", "rate": "$84.00", "zip": "92114"}, {"area": "Vallecito", "rate": "$325.00", "zip": "92036"}, {"area": "Valley Center", "rate": "$150.00", "zip": "92082"}, {"area": "Via de la Valle", "rate": "$54.00", "zip": "92014"}, {"area": "Victoria", "rate": "$150.00", "zip": "91901"}, {"area": "Viejas Casino", "rate": "$150.00", "zip": "91901"}, {"area": "Vista", "rate": "$150.00", "zip": "92081"}, {"area": "Vista", "rate": "$150.00", "zip": "92083"}, {"area": "Vista", "rate": "$150.00", "zip": "92084"}, {"area": "Vista", "rate": "$150.00", "zip": "92085"}, {"area": "Warner Springs", "rate": "$325.00", "zip": "92086"}, {"area": "Whispering Pines", "rate": "$325.00", "zip": "92036"}, {"area": "Wild Animal Park", "rate": "$81.00", "zip": "92027"}, {"area": "Winter Gardens", "rate": "$74.00", "zip": "92040"}, {"area": "Winterwarm", "rate": "$141.00", "zip": "92028"}, {"area": "Witch Creek", "rate": "$150.00", "zip": "92065"}, {"area": "Wynola", "rate": "$325.00", "zip": "92036"}, {"area": "Zoo", "rate": "$33.00", "zip": "92101"}];
+let visible = [...rates];
+let sortKey = "area";
+let sortAsc = true;
+
+const search = document.getElementById("search");
+const body = document.getElementById("rateBody");
+const cards = document.getElementById("mobileCards");
+const status = document.getElementById("status");
+const clearBtn = document.getElementById("clearBtn");
+
+function moneyToNumber(v) {
+  const n = parseFloat(String(v).replace(/[^0-9.-]/g,""));
+  return Number.isFinite(n) ? n : 0;
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+function sortRows() {
+  visible.sort((a,b) => {
+    let av = a[sortKey] || "";
+    let bv = b[sortKey] || "";
+    if (sortKey === "rate") {
+      av = moneyToNumber(av);
+      bv = moneyToNumber(bv);
+      return sortAsc ? av-bv : bv-av;
+    }
+    const result = String(av).localeCompare(String(bv), undefined, {numeric:true,sensitivity:"base"});
+    return sortAsc ? result : -result;
+  });
+}
+
+function render() {
+  sortRows();
+
+  body.innerHTML = visible.map(r => `
+    <tr>
+      <td>${escapeHtml(r.area)}</td>
+      <td class="rate">${escapeHtml(r.rate)}</td>
+      <td>${escapeHtml(r.zip)}</td>
+    </tr>`).join("");
+
+  cards.innerHTML = visible.map(r => `
+    <article class="card">
+      <div class="card-area">${escapeHtml(r.area)}</div>
+      <div class="card-meta">
+        <div class="card-rate">${escapeHtml(r.rate)}</div>
+        <div class="card-zip">ZIP ${escapeHtml(r.zip)}</div>
+      </div>
+    </article>`).join("");
+
+  status.textContent = `${visible.length} rate${visible.length === 1 ? "" : "s"} shown`;
+}
+
+function applySearch() {
+  const q = search.value.trim().toLowerCase();
+  visible = !q ? [...rates] : rates.filter(r =>
+    r.area.toLowerCase().includes(q) ||
+    r.zip.toLowerCase().includes(q) ||
+    r.rate.toLowerCase().includes(q)
+  );
+  render();
+}
+
+search.addEventListener("input", applySearch);
+
+clearBtn.addEventListener("click", () => {
+  search.value = "";
+  applySearch();
+  search.focus();
+});
+
+document.querySelectorAll("th[data-sort]").forEach(th => {
+  th.addEventListener("click", () => {
+    const key = th.dataset.sort;
+    if (sortKey === key) sortAsc = !sortAsc;
+    else {
+      sortKey = key;
+      sortAsc = true;
+    }
+    render();
+  });
+});
+
+render();
+</script>
+</body>
+</html>
