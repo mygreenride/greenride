@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!navContainer) return;
 
   navContainer.innerHTML = `
-    <nav class="main-nav" aria-label="Primary navigation">
+    <nav class="main-nav" aria-label="Green Ride primary navigation">
 
       <ul>
 
@@ -18,10 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </li>
 
         <li>
-          <a href="/curbside-.html">Curbside Pickup</a>
-        </li>
-
-        <li>
           <a href="/rates.html">Airport Rates</a>
         </li>
 
@@ -30,7 +26,19 @@ document.addEventListener("DOMContentLoaded", function () {
         </li>
 
         <li>
+          <a href="/curbside-.html">Curbside Pickup</a>
+        </li>
+
+        <li>
           <a href="/Receipts.htm">Receipts</a>
+        </li>
+
+        <li>
+          <a href="/credit_card_authorization_online-b.htm">Credit Card</a>
+        </li>
+
+        <li>
+          <a href="/Cancel.html">Cancellation</a>
         </li>
 
         <li>
@@ -42,17 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </li>
 
         <li>
-          <a href="/Cancel.html">Cancellation</a>
-        </li>
-
-        <li>
-          <a href="/smsprivacy.html">Privacy & SMS</a>
-        </li>
-
-        <li>
-          <a href="/credit_card_authorization_online-b.htm">
-            Credit Card
-          </a>
+          <a href="/smsprivacy.html">Privacy &amp; SMS</a>
         </li>
 
         <li>
@@ -61,10 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <li>
           <a href="/contact-2.html">Contact</a>
-        </li>
-
-        <li>
-          <a href="/gpt.html">Green Ride</a>
         </li>
 
       </ul>
