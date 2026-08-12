@@ -6,112 +6,262 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="GreenRide San Diego cancellation policy, refunds, curbside pickup instructions, meet & greet details, and rates. Email-only cancellations.">
   <link rel="icon" href="https://greenride.net/favicon.ico" type="image/x-icon">
+
   <style>
-    :root {
-      --bg: #ffffff;
-      --ink: #000000;
-      --muted: #444444;
-      --line: #e6e6e6;
+    :root{
+      --black:#000000;
+      --yellow:#f1c40f;
+      --white:#ffffff;
+      --max:1100px;
     }
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+
+    *{
+      box-sizing:border-box;
     }
-    img { max-width: 100%; height: auto; filter: grayscale(100%); }
-    a { color: var(--ink); text-decoration: underline; }
-    a:hover { text-decoration: none; }
-    header {
-      border-bottom: 1px solid var(--line);
-      padding: 16px;
-      text-align: center;
+
+    html{
+      scroll-behavior:smooth;
     }
-    header .brand {
-      display: inline-flex; align-items: center; gap: 12px;
+
+    body{
+      margin:0;
+      padding:0;
+      font-family:Arial,Helvetica,sans-serif;
+      line-height:1.6;
+      background:var(--black);
+      color:var(--yellow);
     }
-    header .brand img { width: 64px; height: auto; }
-    header .brand h1 {
-      font-size: 1.5rem; margin: 0; letter-spacing: .5px; font-weight: 700;
+
+    a{
+      color:inherit;
     }
-    nav {
-      border-bottom: 1px solid var(--line);
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      background: #fff;
+
+    img{
+      max-width:100%;
+      height:auto;
+      display:block;
     }
-    nav ul {
-      list-style: none; margin: 0; padding: 0;
-      display: flex; flex-wrap: wrap; gap: 8px;
-      justify-content: center;
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:24px 16px;
     }
-    nav a {
-      display: inline-block;
-      padding: 10px 14px;
-      border: 1px solid var(--ink);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: .95rem;
-      white-space: nowrap;
-      background: #fff;
+
+    /* HEADER */
+    header{
+      background:var(--black);
+      color:var(--yellow);
+      text-align:center;
+      border-bottom:4px solid var(--yellow);
     }
-    nav a:hover, nav a:focus { background: var(--ink); color: #fff; }
-    .container { max-width: 880px; margin: 0 auto; padding: 24px 16px 56px; }
-    .notice {
-      border: 2px solid var(--ink);
-      padding: 14px 16px;
-      font-weight: 700;
-      text-align: center;
-      margin: 16px 0 24px;
+
+    .brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
     }
-    h2 {
-      font-size: 1.6rem;
-      margin: 28px 0 10px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 6px;
+
+    .brand img{
+      width:90px;
+      height:auto;
     }
-    h3 { font-size: 1.15rem; margin: 20px 0 8px; color: var(--muted); }
-    p { margin: 10px 0; }
-    ul { margin: 8px 0 16px 20px; }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
+
+    .brand h1{
+      margin:0;
+      font-size:clamp(1.8rem,5vw,3rem);
+      line-height:1.1;
     }
-    @media (min-width: 720px) {
-      .grid { grid-template-columns: 1fr 1fr; }
+
+    .header-phone{
+      margin-top:12px;
+      font-weight:800;
+      font-size:1.1rem;
     }
-    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: .95em; }
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 20px 16px;
-      text-align: center;
-      font-size: .95rem;
-      color: var(--muted);
+
+    /* NAV */
+    nav{
+      background:var(--yellow);
+      color:var(--black);
+      border-bottom:3px solid var(--black);
     }
-    .small { font-size: .95rem; color: var(--muted); }
-    .callout {
-      border-left: 4px solid var(--ink);
-      padding: 10px 14px;
-      background: #fafafa;
+
+    nav ul{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:10px 12px;
+      list-style:none;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:8px;
     }
-    .btn {
-      display: inline-block; padding: 10px 14px; border: 1px solid var(--ink);
-      text-decoration: none; font-weight: 700;
+
+    nav a{
+      display:inline-block;
+      border:2px solid var(--black);
+      border-radius:8px;
+      padding:9px 14px;
+      text-decoration:none;
+      font-weight:800;
+      background:var(--yellow);
+      color:var(--black);
     }
-    .btn:hover { background: var(--ink); color: #fff; }
+
+    nav a:hover,
+    nav a:focus{
+      background:var(--black);
+      color:var(--yellow);
+    }
+
+    /* ALTERNATING SECTIONS */
+    .section{
+      padding:34px 16px;
+    }
+
+    .section--black{
+      background:var(--black);
+      color:var(--yellow);
+    }
+
+    .section--yellow{
+      background:var(--yellow);
+      color:var(--black);
+    }
+
+    .container{
+      max-width:900px;
+      margin:0 auto;
+    }
+
+    h2{
+      margin:0 0 12px;
+      font-size:clamp(1.45rem,4vw,2rem);
+    }
+
+    h3{
+      margin:18px 0 8px;
+      font-size:1.15rem;
+    }
+
+    p{
+      margin:10px 0;
+    }
+
+    ul,
+    ol{
+      margin:10px 0 0 22px;
+      padding:0;
+    }
+
+    .notice{
+      border:3px solid currentColor;
+      border-radius:10px;
+      padding:14px 16px;
+      font-weight:900;
+      text-align:center;
+    }
+
+    .callout{
+      border-left:5px solid currentColor;
+      padding:12px 16px;
+      margin:12px 0;
+      background:rgba(255,255,255,.08);
+    }
+
+    .section--yellow .callout{
+      background:rgba(0,0,0,.06);
+    }
+
+    .btn{
+      display:inline-block;
+      padding:11px 16px;
+      border:2px solid currentColor;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:800;
+    }
+
+    .section--black .btn{
+      color:var(--yellow);
+    }
+
+    .section--yellow .btn{
+      color:var(--black);
+    }
+
+    .btn:hover{
+      background:currentColor;
+    }
+
+    .section--black .btn:hover{
+      color:var(--black);
+      background:var(--yellow);
+    }
+
+    .section--yellow .btn:hover{
+      color:var(--yellow);
+      background:var(--black);
+    }
+
+    .small{
+      font-size:.95rem;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+    }
+
+    @media(min-width:760px){
+      .grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:700px){
+      nav ul{
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        justify-content:flex-start;
+        -webkit-overflow-scrolling:touch;
+      }
+
+      nav a{
+        white-space:nowrap;
+      }
+
+      .brand img{
+        width:72px;
+      }
+    }
+
+    footer{
+      background:var(--black);
+      color:var(--yellow);
+      text-align:center;
+      border-top:4px solid var(--yellow);
+      padding:20px 16px;
+      font-weight:700;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
-  <div class="brand" aria-label="GreenRide">
-    <img src="https://greenride.net/images/350by350a-green-ride.jpg" alt="GreenRide logo">
-    <h1>Cancellation Policy</h1>
+  <div class="wrap">
+    <div class="brand">
+      <img src="https://greenride.net/images/350by350a-green-ride.jpg" alt="GreenRide logo">
+      <h1>Cancellation Policy</h1>
+    </div>
+
+    <div class="header-phone">
+      619-200-2060 &nbsp;•&nbsp; 800-893-7210
+    </div>
   </div>
 </header>
 
@@ -120,11 +270,9 @@
     <li><a href="https://greenride.net/">Home</a></li>
     <li><a href="https://greenride.net/makereservation.html">Reservation</a></li>
     <li><a href="https://greenride.net/curbside-.html">Curbside</a></li>
-    <a href="https://greenride.net/rates.html">Airport Rates</a>
-    <li><a href="https://www.google.com/maps/d/edit?ll=32.74796396920895%2C-117.15133700000001&spn=0.22869%2C0.354309&hl=en&t=m&gl=us&msa=0&z=10&source=embed&ie=UTF8&mid=1mRGTwcwBd-oVj3EB8E-s0IZTxiw">Residential</a></li>
+    <li><a href="https://greenride.net/rates.html">Airport Rates</a></li>
     <li><a href="https://greenride.net/terms_and_conditions.html">Policy</a></li>
     <li><a href="https://greenride.net/credit_card_authorization_online-b.htm">Credit Card</a></li>
-    <li><a href="http://greenride.net/images/RackCard-04-16-2017-Publisher-NON-RESIDENTIAL-FLATRATE1_Page_2.gif">Local</a></li>
     <li><a href="https://greenride.net/Receipts.htm">Receipts</a></li>
     <li><a href="https://greenride.net/aboutus.html">About</a></li>
     <li><a href="https://greenride.net/contact-2.html">Contact</a></li>
@@ -132,36 +280,172 @@
   </ul>
 </nav>
 
-<main class="container">
-  <p class="notice">No refunds are available for services already rendered.</p>
+<section class="section section--black">
+  <div class="container">
+    <p class="notice">No refunds are available for services already rendered.</p>
+  </div>
+</section>
 
-  <section aria-labelledby="how-to-cancel">
-    <h2 id="how-to-cancel">How to Cancel (Email Only)</h2>
+<section class="section section--yellow">
+  <div class="container">
+    <h2>How to Cancel — Email Only</h2>
+
     <p><strong>Phone calls are not accepted for cancellations.</strong></p>
-    <p>Send an email from the <strong>same email address</strong> used on your online reservation (or the credit-card authorization fax email) to:</p>
-    <p class="callout">
-      <a class="btn" href="mailto:Cancellation@GreenRide.net?subject=Cancellation&body=Please%20cancel%20my%20reservation%0ADate%3A%0ATime%3A%0APick%20up%20address%3A%0ADrop%20off%20address%3A%0APassenger%20phone%20number%3A%0AReason%20for%20cancellation%3A">Cancellation@GreenRide.net</a>
+
+    <p>
+      Send your cancellation request from the
+      <strong>same email address used for the reservation</strong>
+      or the associated credit-card authorization.
     </p>
-    <p class="small">Include: Date, Time, Pick-up address, Drop-off address, Passenger phone number, Reason for cancellation.</p>
-  </section>
 
-  <section aria-labelledby="refunds">
-    <h2 id="refunds">Refunds & Timing</h2>
+    <div class="callout">
+      <a class="btn"
+         href="mailto:Cancellation@GreenRide.net?subject=Cancellation&body=Please%20cancel%20my%20reservation%0ADate%3A%0ATime%3A%0APick-up%20address%3A%0ADrop-off%20address%3A%0APassenger%20phone%20number%3A%0AReason%20for%20cancellation%3A">
+        Cancellation@GreenRide.net
+      </a>
+    </div>
+
+    <p class="small">
+      Please include the reservation date, pickup time, pickup address,
+      destination, passenger phone number, and reason for cancellation.
+    </p>
+  </div>
+</section>
+
+<section class="section section--black">
+  <div class="container">
+    <h2>Refunds &amp; Timing</h2>
+
     <ul>
-      <li><strong>Full refund</strong> when you email your cancellation <strong>at least 4 hours in advance within our business hours</strong> prior to pickup.</li>
-      <li>Refunds typically appear within <strong>2 business days</strong> (varies by card and issuing bank).</li>
-      <li><strong>No refunds</strong> for cancellations with less than 4 hours’ email notice (within business hours) or for no-shows.</li>
+      <li>
+        A <strong>full refund</strong> is available when the cancellation email
+        is received at least <strong>4 hours before pickup during Green Ride business hours</strong>.
+      </li>
+      <li>
+        Refunds normally appear within approximately
+        <strong>2 business days</strong>, depending on the card issuer and bank.
+      </li>
+      <li>
+        <strong>No refund</strong> is available for cancellations received with
+        less than 4 hours' qualifying notice or for no-shows.
+      </li>
     </ul>
-  </section>
+  </div>
+</section>
 
-  <section aria-labelledby="rates">
-    <h2 id="rates">Rates (Online Reservations)</h2>
-    <p>All online reservation rates must match the price listed on the Airport Rates page. It is the customer’s responsibility to confirm the correct rate on the website.</p>
-    <p class="small">If a customer provides a rate that differs from the website, it will be treated as a <em>wish rate</em> rather than the actual rate. By submitting a reservation, you agree to all GreenRide.net terms and conditions.</p>
-  </section>
+<section class="section section--yellow">
+  <div class="container">
+    <h2>Rates &amp; Online Reservations</h2>
 
-  <section class="grid" aria-label="Pickup options">
+    <p>
+      Reservation rates are based on the rates published on the Green Ride
+      Airport Rates page.
+    </p>
+
+    <p>
+      Customers are responsible for reviewing the applicable rate before
+      submitting a reservation.
+    </p>
+
+    <p class="small">
+      If a different amount is entered by the customer, that amount does not
+      replace the published Green Ride rate. By submitting a reservation,
+      the customer agrees to GreenRide.net policies and terms.
+    </p>
+
+    <p>
+      <a class="btn" href="https://greenride.net/rates.html">
+        View Airport Rates
+      </a>
+    </p>
+  </div>
+</section>
+
+<section class="section section--black">
+  <div class="container grid">
+
     <article>
-      <h2 id="meet-greet">Meet &amp; Greet (Airport)</h2>
-      <p>For Meet &amp; Greet service, your driver meets you at the baggage claim carousel area. If you cannot locate the driver, call
-        <a href="tel:18008937210">
+      <h2>Meet &amp; Greet</h2>
+
+      <p>
+        For Meet &amp; Greet airport service, the driver will meet the passenger
+        near the baggage claim carousel area.
+      </p>
+
+      <p>
+        If you cannot locate your driver, call
+        <a href="tel:18008937210"><strong>800-893-7210</strong></a>.
+      </p>
+    </article>
+
+    <article>
+      <h2>Curbside Pickup</h2>
+
+      <p>
+        For curbside pickup at San Diego International Airport, Green Ride uses
+        a two-call procedure.
+      </p>
+
+      <ol>
+        <li>
+          Call <strong>619-200-2060</strong> or <strong>800-893-7210</strong>
+          when your flight arrives and phone use is permitted.
+        </li>
+        <li>
+          Call again after collecting your luggage and reaching the curb.
+        </li>
+      </ol>
+
+      <p class="small">
+        This procedure allows the driver to approach the terminal when the passenger
+        is ready and helps reduce unnecessary airport congestion.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section class="section section--yellow">
+  <div class="container">
+    <h2>Travel Time &amp; Airport Arrival</h2>
+
+    <p>
+      Airlines commonly recommend arriving at the airport approximately
+      two hours before departure. Green Ride recommends allowing adequate time
+      for traffic, airport congestion, security screening, and other possible delays.
+    </p>
+
+    <p>
+      Transportation operates on public roadways and may be affected by traffic,
+      weather, road closures, accidents, airport conditions, and other circumstances
+      beyond Green Ride's control.
+    </p>
+
+    <p>
+      For that reason, arrival at a particular destination or airport at an exact
+      time cannot be guaranteed. Green Ride will make every reasonable effort to
+      provide timely transportation.
+    </p>
+  </div>
+</section>
+
+<section class="section section--black">
+  <div class="container">
+    <h2>Questions?</h2>
+
+    <p>
+      Call
+      <a href="tel:16192002060"><strong>619-200-2060</strong></a>
+      or
+      <a href="tel:18008937210"><strong>800-893-7210</strong></a>.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2003–2026 Green Ride • All Rights Reserved<br>
+  PSC-TCP-17591-P
+</footer>
+
+</body>
+</html>
