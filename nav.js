@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navContainer.innerHTML = `
     <nav class="main-nav" aria-label="Primary navigation">
+
       <ul>
 
         <li>
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </li>
 
         <li>
-          <a href="/curbside-.html">Curbside</a>
+          <a href="/curbside-.html">Curbside Pickup</a>
         </li>
 
         <li>
@@ -25,7 +26,19 @@ document.addEventListener("DOMContentLoaded", function () {
         </li>
 
         <li>
+          <a href="/LocalRatesSanDiegoTaxi.html">Local Rates</a>
+        </li>
+
+        <li>
+          <a href="/Receipts.htm">Receipts</a>
+        </li>
+
+        <li>
           <a href="/terms_and_conditions.html">Full Terms</a>
+        </li>
+
+        <li>
+          <a href="/terms.html">Terms Summary</a>
         </li>
 
         <li>
@@ -33,7 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
         </li>
 
         <li>
-          <a href="/credit_card_authorization_online-b.htm">Credit Card</a>
+          <a href="/smsprivacy.html">Privacy & SMS</a>
+        </li>
+
+        <li>
+          <a href="/credit_card_authorization_online-b.htm">
+            Credit Card
+          </a>
         </li>
 
         <li>
@@ -44,7 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
           <a href="/contact-2.html">Contact</a>
         </li>
 
+        <li>
+          <a href="/gpt.html">Green Ride</a>
+        </li>
+
       </ul>
+
     </nav>
   `;
 
