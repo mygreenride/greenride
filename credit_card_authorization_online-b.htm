@@ -127,24 +127,6 @@
       overflow-wrap:anywhere;
     }
 
-    @media(max-width:700px){
-
-      .card-container{
-        text-align:left;
-      }
-
-      .embed{
-        width:100%;
-        max-width:100%;
-      }
-
-      #gr-form{
-        width:100%;
-        max-width:100%;
-      }
-
-    }
-
   </style>
 
 
@@ -171,9 +153,7 @@
 <body>
 
 
-  <!-- ======================================= -->
   <!-- HERO -->
-  <!-- ======================================= -->
 
   <header class="section section--dark">
 
@@ -217,83 +197,14 @@
 
 
 
-  <!-- ======================================= -->
-  <!-- HORIZONTAL NAVIGATION -->
-  <!-- ======================================= -->
+  <!-- SHARED NAVIGATION -->
 
-  <nav
-    class="main-nav"
-    aria-label="Primary navigation"
-  >
-
-    <ul>
-
-      <li>
-        <a href="/">
-          Home
-        </a>
-      </li>
-
-      <li>
-        <a href="/makereservation.html">
-          Reservation
-        </a>
-      </li>
-
-      <li>
-        <a href="/curbside-.html">
-          Curbside
-        </a>
-      </li>
-
-      <li>
-        <a href="/rates.html">
-          Airport Rates
-        </a>
-      </li>
-
-      <li>
-        <a href="/terms_and_conditions.html">
-          Policy
-        </a>
-      </li>
-
-      <li>
-        <a href="/Cancel.html">
-          Cancellation
-        </a>
-      </li>
-
-      <li>
-        <a
-          href="/credit_card_authorization_online-b.htm"
-          aria-current="page"
-        >
-          Credit Card
-        </a>
-      </li>
-
-      <li>
-        <a href="/aboutus.html">
-          About
-        </a>
-      </li>
-
-      <li>
-        <a href="/contact-2.html">
-          Contact
-        </a>
-      </li>
-
-    </ul>
-
-  </nav>
+  <div id="site-nav"></div>
+  <script src="/nav.js"></script>
 
 
 
-  <!-- ======================================= -->
   <!-- PAYMENT POLICY -->
-  <!-- ======================================= -->
 
   <section class="section section--light">
 
@@ -322,7 +233,10 @@
 
       </div>
 
-      <p class="small" style="text-align:center;margin-top:16px;">
+      <p
+        class="small"
+        style="text-align:center;margin-top:16px;"
+      >
         These procedures help protect customers, drivers,
         and GreenRide against unauthorized card use.
       </p>
@@ -333,9 +247,7 @@
 
 
 
-  <!-- ======================================= -->
   <!-- AUTHORIZATION FORM -->
-  <!-- ======================================= -->
 
   <section class="section section--dark">
 
@@ -386,9 +298,7 @@
 
 
 
-  <!-- ======================================= -->
   <!-- CUSTOMER LINKS -->
-  <!-- ======================================= -->
 
   <section class="section section--light">
 
@@ -405,7 +315,7 @@
         </a>
 
         <a href="/terms_and_conditions.html">
-          Policy
+          Full Terms
         </a>
 
         <a href="/Cancel.html">
@@ -428,9 +338,7 @@
 
 
 
-  <!-- ======================================= -->
   <!-- NEED HELP -->
-  <!-- ======================================= -->
 
   <section class="section section--dark">
 
@@ -484,9 +392,7 @@
 
 
 
-  <!-- ======================================= -->
   <!-- AGREEMENT NOTICE -->
-  <!-- ======================================= -->
 
   <section class="section section--light">
 
@@ -504,7 +410,7 @@
       >
 
         <a href="/terms_and_conditions.html">
-          Terms &amp; Conditions
+          Full Terms &amp; Conditions
         </a>
 
         <a href="/Cancel.html">
@@ -523,9 +429,7 @@
 
 
 
-  <!-- ======================================= -->
   <!-- FOOTER -->
-  <!-- ======================================= -->
 
   <footer class="section section--dark">
 
@@ -549,11 +453,9 @@
         class="note"
         style="margin:8px 0 0;"
       >
-
         <a href="/">
           GreenRide.net
         </a>
-
       </p>
 
     </div>
