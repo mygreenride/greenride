@@ -164,9 +164,12 @@
 
   </style>
 
+
+  <!-- GOOGLE ANALYTICS GA4 -->
+
   <script
     async
-    src="https://www.googletagmanager.com/gtag/js?id=UA-19015949-1">
+    src="https://www.googletagmanager.com/gtag/js?id=G-8NBLEQ0X86">
   </script>
 
   <script>
@@ -179,9 +182,7 @@
 
     gtag('js', new Date());
 
-    gtag('config','UA-19015949-1');
-    gtag('config','UA-151223004-1');
-    gtag('config','UA-1105747-18');
+    gtag('config', 'G-8NBLEQ0X86');
 
   </script>
 
@@ -201,6 +202,9 @@
         class="logo"
         src="/images/350by350a-green-ride.jpg"
         alt="Green Ride San Diego Airport transportation"
+        width="120"
+        height="120"
+        fetchpriority="high"
       >
 
       <h1
@@ -256,7 +260,11 @@
   <!-- SHARED NAVIGATION -->
 
   <div id="site-nav"></div>
-  <script src="/nav.js"></script>
+
+  <script
+    src="/nav.js"
+    defer>
+  </script>
 
 
 
@@ -429,6 +437,7 @@
         class="vehicle-image"
         src="/images/car-service-san-diego.jpg"
         alt="Green Ride private San Diego Airport car service vehicle"
+        loading="lazy"
       >
 
     </div>
