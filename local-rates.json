@@ -1,0 +1,420 @@
+{
+  "meta": {
+    "updated": "2026-08-12",
+    "currency": "USD",
+    "pricing_method": "2017 historical rate increased by 40%, then rounded up to the next $5",
+    "pickup_areas": [
+      "Airport",
+      "Downtown",
+      "Hotel Circle",
+      "Mission Valley",
+      "Pacific Beach",
+      "Old Town",
+      "Shelter Island",
+      "Sports Arena"
+    ],
+    "destination_count": 40
+  },
+  "rates": {
+    "Airport": {
+      "Airport": 20,
+      "Downtown": 30,
+      "Hotel Circle": 40,
+      "Mission Valley": 45,
+      "Pacific Beach": 45,
+      "Old Town": 35,
+      "Shelter Island": 25,
+      "Sports Arena": 35
+    },
+    "Balboa Park": {
+      "Airport": 30,
+      "Downtown": 25,
+      "Hotel Circle": 35,
+      "Mission Valley": 35,
+      "Pacific Beach": 50,
+      "Old Town": 35,
+      "Shelter Island": 35,
+      "Sports Arena": 35
+    },
+    "Belmont Park": {
+      "Airport": 45,
+      "Downtown": 45,
+      "Hotel Circle": 35,
+      "Mission Valley": 45,
+      "Pacific Beach": 20,
+      "Old Town": 35,
+      "Shelter Island": 40,
+      "Sports Arena": 20
+    },
+    "Birch Aquarium": {
+      "Airport": 65,
+      "Downtown": 65,
+      "Hotel Circle": 65,
+      "Mission Valley": 75,
+      "Pacific Beach": 50,
+      "Old Town": 65,
+      "Shelter Island": 75,
+      "Sports Arena": 60
+    },
+    "Border Otay": {
+      "Airport": 120,
+      "Downtown": 120,
+      "Hotel Circle": 120,
+      "Mission Valley": 120,
+      "Pacific Beach": 120,
+      "Old Town": 120,
+      "Shelter Island": 120,
+      "Sports Arena": 120
+    },
+    "Border Tijuana": {
+      "Airport": 90,
+      "Downtown": 90,
+      "Hotel Circle": 90,
+      "Mission Valley": 90,
+      "Pacific Beach": 90,
+      "Old Town": 90,
+      "Shelter Island": 90,
+      "Sports Arena": 90
+    },
+    "Convention Center": {
+      "Airport": 30,
+      "Downtown": 20,
+      "Hotel Circle": 35,
+      "Mission Valley": 45,
+      "Pacific Beach": 50,
+      "Old Town": 35,
+      "Shelter Island": 35,
+      "Sports Arena": 35
+    },
+    "Coronado Hotel Del": {
+      "Airport": 50,
+      "Downtown": 35,
+      "Hotel Circle": 60,
+      "Mission Valley": 60,
+      "Pacific Beach": 65,
+      "Old Town": 60,
+      "Shelter Island": 60,
+      "Sports Arena": 60
+    },
+    "Cruise Ship": {
+      "Airport": 35,
+      "Downtown": 20,
+      "Hotel Circle": 40,
+      "Mission Valley": 45,
+      "Pacific Beach": 50,
+      "Old Town": 35,
+      "Shelter Island": 45,
+      "Sports Arena": 35
+    },
+    "Del Mar": {
+      "Airport": 75,
+      "Downtown": 80,
+      "Hotel Circle": 80,
+      "Mission Valley": 80,
+      "Pacific Beach": 80,
+      "Old Town": 80,
+      "Shelter Island": 80,
+      "Sports Arena": 80
+    },
+    "Disneyland": {
+      "Airport": 260,
+      "Downtown": 260,
+      "Hotel Circle": 260,
+      "Mission Valley": 260,
+      "Pacific Beach": 260,
+      "Old Town": 260,
+      "Shelter Island": 260,
+      "Sports Arena": 260
+    },
+    "Downtown": {
+      "Airport": 30,
+      "Downtown": 20,
+      "Hotel Circle": 35,
+      "Mission Valley": 35,
+      "Pacific Beach": 50,
+      "Old Town": 35,
+      "Shelter Island": 35,
+      "Sports Arena": 35
+    },
+    "Factory Outlet / Border": {
+      "Airport": 90,
+      "Downtown": 90,
+      "Hotel Circle": 90,
+      "Mission Valley": 90,
+      "Pacific Beach": 90,
+      "Old Town": 90,
+      "Shelter Island": 90,
+      "Sports Arena": 90
+    },
+    "Factory Outlet / Carlsbad": {
+      "Airport": 105,
+      "Downtown": 105,
+      "Hotel Circle": 105,
+      "Mission Valley": 105,
+      "Pacific Beach": 105,
+      "Old Town": 105,
+      "Shelter Island": 105,
+      "Sports Arena": 105
+    },
+    "Fashion Valley": {
+      "Airport": 40,
+      "Downtown": 40,
+      "Hotel Circle": 20,
+      "Mission Valley": 20,
+      "Pacific Beach": 45,
+      "Old Town": 20,
+      "Shelter Island": 40,
+      "Sports Arena": 20
+    },
+    "Gaslamp Quarter": {
+      "Airport": 30,
+      "Downtown": 20,
+      "Hotel Circle": 35,
+      "Mission Valley": 35,
+      "Pacific Beach": 50,
+      "Old Town": 35,
+      "Shelter Island": 35,
+      "Sports Arena": 35
+    },
+    "Hillcrest": {
+      "Airport": 30,
+      "Downtown": 25,
+      "Hotel Circle": 20,
+      "Mission Valley": 20,
+      "Pacific Beach": 50,
+      "Old Town": 25,
+      "Shelter Island": 45,
+      "Sports Arena": 35
+    },
+    "Hotel Circle": {
+      "Airport": 40,
+      "Downtown": 35,
+      "Hotel Circle": 20,
+      "Mission Valley": 20,
+      "Pacific Beach": 45,
+      "Old Town": 20,
+      "Shelter Island": 40,
+      "Sports Arena": 20
+    },
+    "La Jolla": {
+      "Airport": 60,
+      "Downtown": 65,
+      "Hotel Circle": 60,
+      "Mission Valley": 65,
+      "Pacific Beach": 45,
+      "Old Town": 60,
+      "Shelter Island": 65,
+      "Sports Arena": 60
+    },
+    "LAX": {
+      "Airport": 275,
+      "Downtown": 275,
+      "Hotel Circle": 275,
+      "Mission Valley": 275,
+      "Pacific Beach": 275,
+      "Old Town": 275,
+      "Shelter Island": 275,
+      "Sports Arena": 275
+    },
+    "Legoland / Carlsbad": {
+      "Airport": 105,
+      "Downtown": 105,
+      "Hotel Circle": 105,
+      "Mission Valley": 105,
+      "Pacific Beach": 105,
+      "Old Town": 105,
+      "Shelter Island": 105,
+      "Sports Arena": 105
+    },
+    "MCRD": {
+      "Airport": 20,
+      "Downtown": 30,
+      "Hotel Circle": 20,
+      "Mission Valley": 35,
+      "Pacific Beach": 35,
+      "Old Town": 20,
+      "Shelter Island": 20,
+      "Sports Arena": 20
+    },
+    "Mission Beach": {
+      "Airport": 45,
+      "Downtown": 45,
+      "Hotel Circle": 35,
+      "Mission Valley": 45,
+      "Pacific Beach": 20,
+      "Old Town": 35,
+      "Shelter Island": 35,
+      "Sports Arena": 20
+    },
+    "Mission Valley": {
+      "Airport": 45,
+      "Downtown": 35,
+      "Hotel Circle": 20,
+      "Mission Valley": 20,
+      "Pacific Beach": 50,
+      "Old Town": 35,
+      "Shelter Island": 20,
+      "Sports Arena": 35
+    },
+    "Ocean Beach": {
+      "Airport": 30,
+      "Downtown": 40,
+      "Hotel Circle": 35,
+      "Mission Valley": 45,
+      "Pacific Beach": 35,
+      "Old Town": 35,
+      "Shelter Island": 20,
+      "Sports Arena": 20
+    },
+    "Old Town": {
+      "Airport": 35,
+      "Downtown": 35,
+      "Hotel Circle": 20,
+      "Mission Valley": 35,
+      "Pacific Beach": 40,
+      "Old Town": 20,
+      "Shelter Island": 35,
+      "Sports Arena": 20
+    },
+    "Pacific Beach": {
+      "Airport": 45,
+      "Downtown": 50,
+      "Hotel Circle": 45,
+      "Mission Valley": 50,
+      "Pacific Beach": 20,
+      "Old Town": 40,
+      "Shelter Island": 40,
+      "Sports Arena": 35
+    },
+    "Petco Park": {
+      "Airport": 30,
+      "Downtown": 20,
+      "Hotel Circle": 35,
+      "Mission Valley": 35,
+      "Pacific Beach": 50,
+      "Old Town": 35,
+      "Shelter Island": 35,
+      "Sports Arena": 35
+    },
+    "Snapdragon Stadium (formerly Qualcomm)": {
+      "Airport": 60,
+      "Downtown": 50,
+      "Hotel Circle": 45,
+      "Mission Valley": 40,
+      "Pacific Beach": 65,
+      "Old Town": 50,
+      "Shelter Island": 60,
+      "Sports Arena": 50
+    },
+    "SDSU": {
+      "Airport": 60,
+      "Downtown": 60,
+      "Hotel Circle": 50,
+      "Mission Valley": 50,
+      "Pacific Beach": 65,
+      "Old Town": 60,
+      "Shelter Island": 60,
+      "Sports Arena": 60
+    },
+    "Seaport Village": {
+      "Airport": 30,
+      "Downtown": 20,
+      "Hotel Circle": 35,
+      "Mission Valley": 35,
+      "Pacific Beach": 50,
+      "Old Town": 35,
+      "Shelter Island": 35,
+      "Sports Arena": 35
+    },
+    "SeaWorld": {
+      "Airport": 45,
+      "Downtown": 45,
+      "Hotel Circle": 35,
+      "Mission Valley": 45,
+      "Pacific Beach": 20,
+      "Old Town": 35,
+      "Shelter Island": 35,
+      "Sports Arena": 20
+    },
+    "SeaWorld Water Park": {
+      "Airport": 90,
+      "Downtown": 90,
+      "Hotel Circle": 90,
+      "Mission Valley": 90,
+      "Pacific Beach": 90,
+      "Old Town": 90,
+      "Shelter Island": 90,
+      "Sports Arena": 90
+    },
+    "Shelter Island": {
+      "Airport": 25,
+      "Downtown": 35,
+      "Hotel Circle": 40,
+      "Mission Valley": 45,
+      "Pacific Beach": 40,
+      "Old Town": 35,
+      "Shelter Island": 20,
+      "Sports Arena": 20
+    },
+    "Sports Arena": {
+      "Airport": 35,
+      "Downtown": 35,
+      "Hotel Circle": 20,
+      "Mission Valley": 35,
+      "Pacific Beach": 35,
+      "Old Town": 20,
+      "Shelter Island": 20,
+      "Sports Arena": 20
+    },
+    "UCSD": {
+      "Airport": 60,
+      "Downtown": 65,
+      "Hotel Circle": 65,
+      "Mission Valley": 65,
+      "Pacific Beach": 50,
+      "Old Town": 65,
+      "Shelter Island": 65,
+      "Sports Arena": 65
+    },
+    "UTC / University City": {
+      "Airport": 60,
+      "Downtown": 65,
+      "Hotel Circle": 65,
+      "Mission Valley": 65,
+      "Pacific Beach": 50,
+      "Old Town": 65,
+      "Shelter Island": 65,
+      "Sports Arena": 65
+    },
+    "USD": {
+      "Airport": 45,
+      "Downtown": 45,
+      "Hotel Circle": 20,
+      "Mission Valley": 35,
+      "Pacific Beach": 45,
+      "Old Town": 20,
+      "Shelter Island": 45,
+      "Sports Arena": 20
+    },
+    "San Diego Zoo Safari Park": {
+      "Airport": 105,
+      "Downtown": 105,
+      "Hotel Circle": 105,
+      "Mission Valley": 105,
+      "Pacific Beach": 105,
+      "Old Town": 105,
+      "Shelter Island": 105,
+      "Sports Arena": 105
+    },
+    "San Diego Zoo": {
+      "Airport": 35,
+      "Downtown": 25,
+      "Hotel Circle": 35,
+      "Mission Valley": 35,
+      "Pacific Beach": 50,
+      "Old Town": 35,
+      "Shelter Island": 40,
+      "Sports Arena": 35
+    }
+  }
+}
