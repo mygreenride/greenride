@@ -30,7 +30,6 @@
     href="/style.css"
   >
 
-
   <!-- RATE PAGE ONLY STYLES -->
   <style>
 
@@ -239,14 +238,11 @@
 <body>
 
 
-  <!-- ======================================= -->
   <!-- HERO -->
-  <!-- ======================================= -->
 
   <header class="section section--dark">
 
     <div class="wrap">
-
 
       <img
         class="logo"
@@ -254,17 +250,14 @@
         alt="Green Ride logo"
       >
 
-
       <h1 class="title title--xl">
         San Diego Airport Flat Rates
       </h1>
-
 
       <p class="lead">
         Reliable door-to-door transportation for San Diego Airport,
         LAX, and destinations throughout Southern California.
       </p>
-
 
       <p style="margin:18px 0 0;">
 
@@ -275,7 +268,6 @@
           Call: 619-200-2060
         </a>
 
-
         <a
           class="cta-phone"
           href="tel:18008937210"
@@ -284,7 +276,6 @@
         </a>
 
       </p>
-
 
       <p
         class="lead"
@@ -300,82 +291,24 @@
 
       </p>
 
-
     </div>
 
   </header>
 
 
 
-  <!-- ======================================= -->
-  <!-- HORIZONTAL NAVIGATION -->
-  <!-- ======================================= -->
+  <!-- SHARED NAVIGATION -->
 
-  <nav
-    class="main-nav"
-    aria-label="Primary navigation"
-  >
-
-    <ul>
-
-      <li>
-        <a href="/">
-          Home
-        </a>
-      </li>
-
-
-      <li>
-        <a href="/curbside-.html">
-          Curbside
-        </a>
-      </li>
-
-
-      <li>
-        <a
-          href="/rates.html"
-          aria-current="page"
-        >
-          Airport Rates
-        </a>
-      </li>
-
-
-      <li>
-        <a href="/terms_and_conditions.html">
-          Policy
-        </a>
-      </li>
-
-
-      <li>
-        <a href="/aboutus.html">
-          About
-        </a>
-      </li>
-
-
-      <li>
-        <a href="/contact-2.html">
-          Contact
-        </a>
-      </li>
-
-    </ul>
-
-  </nav>
+  <div id="site-nav"></div>
+  <script src="/nav.js"></script>
 
 
 
-  <!-- ======================================= -->
   <!-- RATE SEARCH -->
-  <!-- ======================================= -->
 
   <main class="rates-main">
 
     <div class="rates-container">
-
 
       <section class="search-panel">
 
@@ -383,11 +316,9 @@
           Find Your Flat Rate
         </h2>
 
-
         <p>
           Search by neighborhood, city, destination, or ZIP code.
         </p>
-
 
         <div class="search-row">
 
@@ -398,7 +329,6 @@
             autocomplete="off"
             aria-label="Search airport rates"
           >
-
 
           <button
             id="clearBtn"
@@ -412,7 +342,6 @@
       </section>
 
 
-
       <div
         class="status"
         id="status"
@@ -421,9 +350,7 @@
         Loading rates…
       </div>
 
-
       <div id="errorBox"></div>
-
 
 
       <!-- DESKTOP TABLE -->
@@ -461,13 +388,11 @@
 
           </thead>
 
-
           <tbody id="rateBody"></tbody>
 
         </table>
 
       </div>
-
 
 
       <!-- MOBILE RATE CARDS -->
@@ -478,8 +403,7 @@
       ></div>
 
 
-
-      <!-- RATE DISCLAIMER -->
+      <!-- DISCLAIMER -->
 
       <div class="disclaimer">
 
@@ -487,13 +411,13 @@
 
         Listed rates are based on the Green Ride rate sheet.
 
-        Tolls, parking, waiting time, gratuity, and other applicable
-        charges may be additional under Green Ride policies.
+        Tolls, parking, waiting time, gratuity,
+        and other applicable charges may be additional
+        under Green Ride policies.
 
         Call to confirm availability and the current rate before travel.
 
       </div>
-
 
     </div>
 
@@ -501,9 +425,7 @@
 
 
 
-  <!-- ======================================= -->
   <!-- FOOTER -->
-  <!-- ======================================= -->
 
   <footer class="section section--dark">
 
@@ -516,7 +438,6 @@
         &copy; 2003–2026 • Green Ride • All Rights Reserved
       </p>
 
-
       <p
         class="note"
         style="margin:6px 0 0;"
@@ -524,16 +445,13 @@
         PSC-TCP-17591-P
       </p>
 
-
       <p
         class="note"
         style="margin:8px 0 0;"
       >
-
         <a href="/">
           GreenRide.net
         </a>
-
       </p>
 
     </div>
@@ -542,9 +460,7 @@
 
 
 
-  <!-- ======================================= -->
   <!-- RATE SEARCH JAVASCRIPT -->
-  <!-- ======================================= -->
 
   <script>
 
@@ -553,7 +469,6 @@
 
     let sortKey = "area";
     let sortAsc = true;
-
 
     const search =
       document.getElementById("search");
@@ -574,7 +489,6 @@
       document.getElementById("errorBox");
 
 
-
     function moneyToNumber(v){
 
       const n =
@@ -590,23 +504,17 @@
     }
 
 
-
     function escapeHtml(s){
 
       return String(s)
 
         .replaceAll("&","&amp;")
-
         .replaceAll("<","&lt;")
-
         .replaceAll(">","&gt;")
-
         .replaceAll('"',"&quot;")
-
         .replaceAll("'","&#039;");
 
     }
-
 
 
     function sortRows(){
@@ -619,21 +527,16 @@
         let bv =
           b[sortKey] || "";
 
-
         if(sortKey === "rate"){
 
-          av =
-            moneyToNumber(av);
-
-          bv =
-            moneyToNumber(bv);
+          av = moneyToNumber(av);
+          bv = moneyToNumber(bv);
 
           return sortAsc
             ? av - bv
             : bv - av;
 
         }
-
 
         const result =
           String(av).localeCompare(
@@ -645,7 +548,6 @@
             }
           );
 
-
         return sortAsc
           ? result
           : -result;
@@ -655,11 +557,9 @@
     }
 
 
-
     function render(){
 
       sortRows();
-
 
       body.innerHTML =
         visible.map(r => `
@@ -681,7 +581,6 @@
           </tr>
 
         `).join("");
-
 
 
       cards.innerHTML =
@@ -710,12 +609,10 @@
         `).join("");
 
 
-
       status.textContent =
         `${visible.length} rate${visible.length === 1 ? "" : "s"} shown`;
 
     }
-
 
 
     function applySearch(){
@@ -724,7 +621,6 @@
         search.value
           .trim()
           .toLowerCase();
-
 
       visible =
         !q
@@ -751,11 +647,9 @@
 
           );
 
-
       render();
 
     }
-
 
 
     async function loadRates(){
@@ -770,7 +664,6 @@
             }
           );
 
-
         if(!response.ok){
 
           throw new Error(
@@ -779,10 +672,8 @@
 
         }
 
-
         const data =
           await response.json();
-
 
         rates =
           Array.isArray(data)
@@ -791,10 +682,8 @@
 
           : (data.rates || []);
 
-
         visible =
           [...rates];
-
 
         render();
 
@@ -804,17 +693,12 @@
 
         status.textContent = "";
 
-
         errorBox.innerHTML =
 
           '<div class="error">' +
-
           'Rates could not be loaded. ' +
-
           'Please call 619-200-2060 for assistance.' +
-
           '</div>';
-
 
         console.error(err);
 
@@ -823,12 +707,10 @@
     }
 
 
-
     search.addEventListener(
       "input",
       applySearch
     );
-
 
 
     clearBtn.addEventListener(
@@ -845,7 +727,6 @@
     );
 
 
-
     document
       .querySelectorAll("th[data-sort]")
       .forEach(th => {
@@ -856,7 +737,6 @@
 
             const key =
               th.dataset.sort;
-
 
             if(sortKey === key){
 
@@ -875,14 +755,12 @@
 
             }
 
-
             render();
 
           }
         );
 
       });
-
 
 
     loadRates();
