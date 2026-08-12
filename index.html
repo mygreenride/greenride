@@ -2,28 +2,51 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
 
-  <title>San Diego Airport Taxi & Flat Rate Shuttle | Green Ride Transportation</title>
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    San Diego Airport Transportation | Upfront & Flat Rates | Green Ride
+  </title>
 
   <meta
     name="description"
-    content="Affordable San Diego Airport Taxi & Flat Rate Shuttle Service. Reliable cab, sedan, and limo rides to and from San Diego International Airport, LAX, Tijuana, hotels, and convention centers. Book professional, door-to-door airport transportation today."
+    content="Green Ride provides San Diego Airport transportation with upfront rates, private car service, curbside pickup, LAX transportation and flat-rate options for many destinations. Serving San Diego since 2003. Call 619-200-2060."
   >
 
   <meta
     name="keywords"
-    content="San Diego airport taxi, airport shuttle San Diego, flat rate taxi San Diego, San Diego airport transportation, taxi to San Diego International Airport, LAX shuttle from San Diego, Tijuana airport shuttle, San Diego limo service, sedan and cab service, group airport transportation, hotel and convention center shuttle San Diego"
+    content="San Diego Airport transportation, upfront airport rates San Diego, San Diego Airport car service, San Diego Airport taxi, San Diego Airport shuttle, SAN airport transportation, flat rate airport transportation, San Diego airport pickup, San Diego to LAX transportation"
   >
 
-  <!-- Open Graph -->
+  <link
+    rel="canonical"
+    href="https://greenride.net/"
+  >
+
   <meta
     property="og:title"
-    content="San Diego Airport Taxi & Flat Rate Shuttle | Reliable Airport Transportation"
+    content="San Diego Airport Transportation | Upfront & Flat Rates | Green Ride"
   >
 
-  <meta property="og:type" content="website">
+  <meta
+    property="og:description"
+    content="Private San Diego Airport transportation with upfront rates, curbside pickup, airport transfers and long-distance transportation. Serving San Diego since 2003."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
 
   <meta
     property="og:url"
@@ -36,16 +59,10 @@
   >
 
   <meta
-    property="og:description"
-    content="Flat Rate Taxi & Shuttle in San Diego. Quality airport transportation to San Diego Airport, LAX, Tijuana, and more. Private sedan, shuttle, and limo rides for business and leisure travelers."
-  >
-
-  <meta
     property="og:site_name"
-    content="Green Ride San Diego"
+    content="Green Ride"
   >
 
-  <!-- PWA -->
   <meta
     name="apple-mobile-web-app-capable"
     content="yes"
@@ -58,15 +75,14 @@
 
   <meta
     name="apple-mobile-web-app-title"
-    content="Green Ride Airport Taxi San Diego"
+    content="Green Ride"
   >
 
   <meta
     name="application-name"
-    content="San Diego Airport Taxi & Shuttle"
+    content="Green Ride"
   >
 
-  <!-- Google Site Verification -->
   <meta
     name="google-site-verification"
     content="6xkiIhVeWjOVF8sdJkaTEubiDrBBj_r2CUwqmNLntnQ"
@@ -77,25 +93,84 @@
     content="B-Xqdnf4fhGonFyky2YNuY-gOkRxL-OM7VWUaFgG8G4"
   >
 
-  <!-- Favicon -->
   <link
     rel="icon"
     href="/favicon.ico"
   >
 
-  <!-- MASTER GREEN RIDE STYLESHEET -->
   <link
     rel="stylesheet"
     href="/style.css"
   >
 
-  <!-- Google Analytics -->
+  <style>
+
+    .home-copy{
+      width:100%;
+      max-width:900px;
+      margin:0 auto;
+      text-align:left;
+      font-size:clamp(16px,2vw,20px);
+      line-height:1.7;
+    }
+
+    .home-copy p{
+      margin:0 0 18px;
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .service-card{
+      border:3px solid currentColor;
+      border-radius:12px;
+      padding:20px 16px;
+      text-align:center;
+    }
+
+    .service-card h3{
+      margin:0 0 10px;
+      font-size:clamp(20px,3vw,28px);
+    }
+
+    .service-card p{
+      margin:0;
+    }
+
+    .trust-line{
+      max-width:900px;
+      margin:18px auto 0;
+      font-weight:800;
+      font-size:clamp(16px,2.3vw,22px);
+    }
+
+    .price-highlight{
+      font-size:clamp(30px,7vw,68px);
+      font-weight:900;
+      margin:8px 0;
+    }
+
+    @media(max-width:800px){
+
+      .service-grid{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+  </style>
+
   <script
     async
     src="https://www.googletagmanager.com/gtag/js?id=UA-19015949-1">
   </script>
 
   <script>
+
     window.dataLayer = window.dataLayer || [];
 
     function gtag(){
@@ -107,6 +182,7 @@
     gtag('config','UA-19015949-1');
     gtag('config','UA-151223004-1');
     gtag('config','UA-1105747-18');
+
   </script>
 
 </head>
@@ -115,90 +191,118 @@
 <body>
 
 
-  <!-- ========================================= -->
   <!-- HERO -->
-  <!-- ========================================= -->
 
-  <section class="section section--dark">
+  <header class="section section--dark">
 
     <div class="wrap">
 
       <img
         class="logo"
         src="/images/350by350a-green-ride.jpg"
-        alt="Green Ride San Diego transportation logo"
+        alt="Green Ride San Diego Airport transportation"
       >
 
-      <h1 class="title title--xl">
-        San Diego Airport Taxi &amp; Flat Rate Shuttle
+      <h1
+        class="title title--xxl"
+        style="margin-top:12px;"
+      >
+        San Diego Airport Transportation
       </h1>
 
       <p class="lead">
-        Reliable door-to-door rides to SAN, LAX, and Tijuana —
-        sedan, shuttle, and limo.
+        Upfront Airport Rates • Private Car Service • Curbside Pickup
       </p>
 
+      <p class="trust-line">
+        Serving San Diego travelers since 2003
+      </p>
 
-      <p style="margin:18px 0 0;">
-
-        <a
-          class="cta-phone"
-          href="tel:16192002060">
-          Call: 619-200-2060
-        </a>
+      <p style="margin:22px 0 0;">
 
         <a
           class="cta-phone"
-          href="tel:18008937210">
-          Toll-Free: 800-893-7210
+          href="tel:16192002060"
+        >
+          Call 619-200-2060
         </a>
 
       </p>
 
+      <p style="margin:10px 0 0;">
+
+        <a
+          class="cta-phone"
+          href="tel:18008937210"
+        >
+          Toll-Free 800-893-7210
+        </a>
+
+      </p>
 
       <p
         class="lead"
-        style="margin:16px 0 0;"
+        style="margin-top:20px;"
       >
-
-        <a
-          class="btn btn--invert"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeeYE9U35B4nYWRIoBxvEzKT9nxb9ob5z25mdQ8jw1_veAYTg/viewform"
-          target="_blank"
-          rel="noopener">
-          Get a Quote / Book Now
-        </a>
-
+        Call for upfront pricing, availability and reservations.
       </p>
 
     </div>
 
-  </section>
+  </header>
 
 
 
-  <!-- ========================================= -->
-  <!-- MAIN HORIZONTAL NAVIGATION -->
-  <!-- ========================================= -->
+  <!-- SHARED NAVIGATION -->
 
-<div id="site-nav"></div>
-<script src="/nav.js"></script>
+  <div id="site-nav"></div>
+  <script src="/nav.js"></script>
 
 
 
-  <!-- ========================================= -->
-  <!-- VEHICLE IMAGE -->
-  <!-- ========================================= -->
+  <!-- PRIMARY INTRODUCTION -->
 
   <section class="section section--light">
 
     <div class="wrap">
 
-      <img
-        class="vehicle-image"
-        src="/images/car-service-san-diego.jpg"
-        alt="Green Ride San Diego airport car service"
-      >
+      <h2 class="title title--xl">
+        San Diego Airport Car Service With Upfront Pricing
+      </h2>
+
+      <div class="home-copy">
+
+        <p>
+          Green Ride provides private
+          <strong>San Diego Airport transportation</strong>
+          for travelers arriving at or departing from
+          San Diego International Airport.
+        </p>
+
+        <p>
+          Green Ride offers
+          <strong>upfront airport rates</strong>
+          so passengers can review pricing before the ride.
+          Many San Diego destinations are offered with
+          flat-rate pricing, subject to applicable fees,
+          waiting time, tolls, parking, gratuity,
+          and other service conditions.
+        </p>
+
+        <p>
+          Our airport transportation service is designed for passengers
+          who want a direct ride without unnecessary shuttle stops,
+          long taxi lines, or multiple passenger pickups along the way.
+        </p>
+
+        <p>
+          Green Ride provides private sedan service,
+          hybrid vehicles, curbside pickup,
+          airport transfers and long-distance transportation
+          throughout San Diego County and beyond.
+        </p>
+
+      </div>
 
     </div>
 
@@ -206,48 +310,39 @@
 
 
 
-  <!-- ========================================= -->
-  <!-- TRANSPORTATION / RATE HIGHLIGHT -->
-  <!-- ========================================= -->
+  <!-- SERVICES -->
 
   <section class="section section--dark">
 
     <div class="wrap">
 
-
       <h2 class="title title--xl">
-        San Diego’s Best Quality Transportation
+        San Diego Airport Transportation Services
       </h2>
 
-
-      <p class="lead">
-        Environmentally Friendly • Hybrid Vehicles • Taxi • Shuttle • Sedan Service
-      </p>
+      <div class="service-grid">
 
 
-      <div
-        class="grid grid--2"
-        style="margin-top:24px;"
-      >
+        <div class="service-card">
 
-
-        <!-- FLAT RATE -->
-
-        <div>
-
-          <h3 class="title">
-            Flat Rate Highlights
+          <h3>
+            Airport Pickup
           </h3>
 
-          <p class="note">
+          <p>
+            Private curbside pickup from
+            San Diego International Airport
+            using Green Ride's simple two-call pickup procedure.
+          </p>
 
-            LAX $275.00
+          <p style="margin-top:16px;">
 
-            <br>
-
-            <small>
-              Some restrictions may apply.
-            </small>
+            <a
+              class="btn btn--invert"
+              href="/curbside-.html"
+            >
+              Curbside Instructions
+            </a>
 
           </p>
 
@@ -255,34 +350,55 @@
 
 
 
-        <!-- QUICK LINKS -->
+        <div class="service-card">
 
-        <div>
-
-          <h3 class="title">
-            Quick Links
+          <h3>
+            Upfront Airport Rates
           </h3>
 
+          <p>
+            Search Green Ride rates for hundreds of
+            San Diego destinations and ZIP codes
+            before your ride.
+          </p>
 
-          <div class="nav">
+          <p style="margin-top:16px;">
 
             <a
+              class="btn btn--invert"
               href="/rates.html"
-              title="Green Ride Airport Rates">
-              Airport Rates
+            >
+              View Upfront Airport Rates
             </a>
 
+          </p>
 
-            <a href="/Receipts.htm">
-              Receipt Requests
+        </div>
+
+
+
+        <div class="service-card">
+
+          <h3>
+            Long-Distance Service
+          </h3>
+
+          <p>
+            Transportation is available for longer trips,
+            including service between San Diego and
+            Southern California destinations.
+          </p>
+
+          <p style="margin-top:16px;">
+
+            <a
+              class="btn btn--invert"
+              href="/contact-2.html"
+            >
+              Contact Green Ride
             </a>
 
-
-            <a href="/LocalRatesSanDiegoTaxi.html">
-              Regular Local Rates
-            </a>
-
-          </div>
+          </p>
 
         </div>
 
@@ -295,101 +411,25 @@
 
 
 
-  <!-- ========================================= -->
-  <!-- POLICIES -->
-  <!-- ========================================= -->
+  <!-- VEHICLE -->
 
   <section class="section section--light">
 
     <div class="wrap">
 
-
       <h2 class="title title--xl">
-        Policies &amp; Terms
+        Private Airport Car Service
       </h2>
 
-
-      <div
-        class="nav"
-        style="margin-top:10px;"
-      >
-
-        <a href="/smsprivacy.html#smsconsent">
-          SMS Consent
-        </a>
-
-
-        <a href="/smsprivacy.html">
-          Privacy Policy
-        </a>
-
-
-        <a href="/terms_and_conditions.html">
-  Terms &amp; Conditions
-</a>
-
-      </div>
-
-
-
-      <div
-        class="note"
-        style="
-          margin-top:18px;
-          text-align:left;
-          max-width:850px;
-          margin-left:auto;
-          margin-right:auto;
-        "
-      >
-
-        <ul>
-
-          <li>
-            All tolls and parking fees are additional.
-          </li>
-
-
-          <li>
-            20% gratuity will be added to all reservations.
-          </li>
-
-
-          <li>
-            Additional waiting time charges,
-            if applicable,
-            are charged by the minute.
-          </li>
-
-
-          <li>
-            Up to 4 passengers from the same party and pickup address
-            ride for the same sedan rate.
-          </li>
-
-
-          <li>
-            GreenRide.net may charge for time spent outside normal
-            point-to-point service at $80 per hour plus 20% gratuity.
-          </li>
-
-        </ul>
-
-      </div>
-
-
-
-      <p
-        class="lead"
-        style="margin-top:18px;"
-      >
-
-        By using GreenRide.net,
-        you agree to the applicable policies and terms
-        listed on this website.
-
+      <p class="lead">
+        Clean vehicles • Direct transportation • Upfront pricing
       </p>
 
+      <img
+        class="vehicle-image"
+        src="/images/car-service-san-diego.jpg"
+        alt="Green Ride private San Diego Airport car service vehicle"
+      >
 
     </div>
 
@@ -397,43 +437,64 @@
 
 
 
-  <!-- ========================================= -->
-  <!-- PHONE CALL TO ACTION -->
-  <!-- ========================================= -->
+  <!-- WHY GREEN RIDE -->
 
   <section class="section section--dark">
 
     <div class="wrap">
 
-
-      <h2 class="title title--xxl">
-
-        Call Now:
-
-        <br>
-
-        <a href="tel:16192002060">
-          619-200-2060
-        </a>
-
+      <h2 class="title title--xl">
+        Why Choose Green Ride?
       </h2>
 
+      <ul class="checklist">
 
+        <li>
+          Serving San Diego travelers since 2003
+        </li>
 
-      <h2 class="title title--xxl">
+        <li>
+          Private San Diego Airport transportation
+        </li>
 
-        <a href="tel:18008937210">
-          800-893-7210
-        </a>
+        <li>
+          Upfront airport rates
+        </li>
 
-      </h2>
+        <li>
+          Flat-rate pricing available for many destinations
+        </li>
 
+        <li>
+          Direct curbside pickup at San Diego International Airport
+        </li>
 
+        <li>
+          No unnecessary shuttle stops
+        </li>
 
-      <p class="lead">
-        Fast quotes • On-time pickups • Professional drivers
-      </p>
+        <li>
+          Sedan and hybrid vehicle options
+        </li>
 
+        <li>
+          Local and long-distance transportation
+        </li>
+
+        <li>
+          Published airport rates for hundreds of destinations
+        </li>
+
+        <li>
+          Professional transportation service
+        </li>
+
+        <li>
+          California passenger transportation license
+          PSC-TCP-17591-P
+        </li>
+
+      </ul>
 
     </div>
 
@@ -441,14 +502,285 @@
 
 
 
-  <!-- ========================================= -->
+  <!-- AIRPORT RATES -->
+
+  <section class="section section--light">
+
+    <div class="wrap">
+
+      <h2 class="title title--xl">
+        San Diego Airport Upfront Rates
+      </h2>
+
+      <p class="lead">
+        Search Green Ride airport transportation rates
+        by destination or ZIP code before your ride.
+      </p>
+
+      <p style="margin-top:20px;">
+
+        <a
+          class="btn"
+          href="/rates.html"
+        >
+          View Upfront Airport Rates
+        </a>
+
+      </p>
+
+      <p
+        class="note"
+        style="margin-top:18px;"
+      >
+        Many destinations use flat-rate pricing.
+        Tolls, parking, waiting time, gratuity,
+        fuel surcharges, special-event pricing,
+        or other applicable charges may be additional.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- LAX -->
+
+  <section class="section section--dark">
+
+    <div class="wrap">
+
+      <h2 class="title title--xl">
+        San Diego to LAX Transportation
+      </h2>
+
+      <p class="lead">
+        Private long-distance transportation between
+        San Diego and Los Angeles International Airport.
+      </p>
+
+      <p class="price-highlight">
+        LAX $275
+      </p>
+
+      <p class="note">
+        Call Green Ride to confirm the current upfront rate,
+        availability, and any applicable additional charges.
+      </p>
+
+      <p style="margin-top:18px;">
+
+        <a
+          class="btn btn--invert"
+          href="tel:16192002060"
+        >
+          Call 619-200-2060
+        </a>
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- AIRPORT PICKUP -->
+
+  <section class="section section--light">
+
+    <div class="wrap">
+
+      <h2 class="title title--xl">
+        San Diego Airport Curbside Pickup
+      </h2>
+
+      <div class="home-copy">
+
+        <p>
+          San Diego International Airport limits how long
+          transportation vehicles can wait at the terminal curb.
+        </p>
+
+        <p>
+          Green Ride uses a simple
+          <strong>2 Phone Call Policy</strong>
+          to coordinate airport pickup.
+        </p>
+
+        <p>
+          Call once when your flight lands.
+          Call again when you are outside at the curb
+          with your luggage and nearest zone sign.
+        </p>
+
+      </div>
+
+      <p style="margin-top:18px;">
+
+        <a
+          class="btn"
+          href="/curbside-.html"
+        >
+          Read Airport Pickup Instructions
+        </a>
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SERVICE AREA -->
+
+  <section class="section section--dark">
+
+    <div class="wrap">
+
+      <h2 class="title title--xl">
+        Airport Transportation Throughout San Diego
+      </h2>
+
+      <p class="lead">
+        Green Ride serves destinations throughout San Diego County
+        and surrounding areas.
+      </p>
+
+      <div
+        class="nav"
+        style="margin-top:20px;"
+      >
+
+        <a href="/rates.html">
+          Upfront Airport Rates
+        </a>
+
+        <a href="/LocalRatesSanDiegoTaxi.html">
+          Local Transportation Rates
+        </a>
+
+        <a href="/makereservation.html">
+          Reservation Information
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- CUSTOMER INFORMATION -->
+
+  <section class="section section--light">
+
+    <div class="wrap">
+
+      <h2 class="title title--xl">
+        Green Ride Customer Information
+      </h2>
+
+      <div class="nav">
+
+        <a href="/rates.html">
+          Upfront Airport Rates
+        </a>
+
+        <a href="/curbside-.html">
+          Curbside Pickup
+        </a>
+
+        <a href="/terms_and_conditions.html">
+          Full Terms
+        </a>
+
+        <a href="/Cancel.html">
+          Cancellation
+        </a>
+
+        <a href="/smsprivacy.html">
+          Privacy &amp; SMS
+        </a>
+
+        <a href="/credit_card_authorization_online-b.htm">
+          Credit Card
+        </a>
+
+        <a href="/Receipts.htm">
+          Receipts
+        </a>
+
+        <a href="/aboutus.html">
+          About Green Ride
+        </a>
+
+        <a href="/contact-2.html">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- FINAL CTA -->
+
+  <section class="section section--dark">
+
+    <div class="wrap">
+
+      <h2 class="title title--xxl">
+        Need San Diego Airport Transportation?
+      </h2>
+
+      <p class="lead">
+        Call Green Ride for upfront pricing,
+        availability and reservations.
+      </p>
+
+      <p style="margin:20px 0 0;">
+
+        <a
+          class="cta-phone"
+          href="tel:16192002060"
+        >
+          619-200-2060
+        </a>
+
+      </p>
+
+      <p style="margin:10px 0 0;">
+
+        <a
+          class="cta-phone"
+          href="tel:18008937210"
+        >
+          800-893-7210
+        </a>
+
+      </p>
+
+      <p class="trust-line">
+        Green Ride • Serving San Diego Since 2003
+      </p>
+
+    </div>
+
+  </section>
+
+
+
   <!-- FOOTER -->
-  <!-- ========================================= -->
 
   <footer class="section section--light">
 
     <div class="wrap">
-
 
       <p
         class="lead"
@@ -457,7 +789,6 @@
         &copy; 2003–2026 • Green Ride • All Rights Reserved
       </p>
 
-
       <p
         class="note"
         style="margin:6px 0 0;"
@@ -465,18 +796,16 @@
         PSC-TCP-17591-P
       </p>
 
-
       <p
         class="note"
         style="margin:8px 0 0;"
       >
-
+        San Diego Airport Transportation
+        •
         <a href="/">
           GreenRide.net
         </a>
-
       </p>
-
 
     </div>
 
@@ -484,4 +813,5 @@
 
 
 </body>
+
 </html>
