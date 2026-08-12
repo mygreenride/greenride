@@ -6,192 +6,564 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>San Diego Airport Curbside Passenger Pick-Up | Green Ride Transportation</title>
-  <meta name="description" content="Green Ride curbside pickup instructions for San Diego International Airport (SAN). Follow our 2 Phone Call Policy and meet your driver at the nearest zone sign by the curb. Call 800-893-7210 or 619-200-2060.">
+
+  <meta
+    name="description"
+    content="Green Ride curbside pickup instructions for San Diego International Airport (SAN). Follow our 2 Phone Call Policy and meet your driver at the nearest zone sign by the curb. Call 800-893-7210 or 619-200-2060."
+  >
+
   <link rel="icon" href="https://greenride.net/favicon.ico" />
 
-  <!-- Styles: shared across Green Ride pages -->
   <style>
     :root{
-      --black:#000;
+      --black:#000000;
       --yellow:#f1c40f;
-      --white:#fff;
-      --brand:#1FA943; /* legacy green accent if needed */
-      --font: Arial, Helvetica, sans-serif;
+      --white:#ffffff;
+      --font:Arial,Helvetica,sans-serif;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--black);color:var(--yellow);font-family:var(--font)}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;display:block;margin:0 auto}
-    .wrap{max-width:1100px;margin:auto;padding:24px}
-    .section{padding:32px 16px;text-align:center}
-    .section--dark{background:var(--black);color:var(--yellow)}
-    .section--light{background:var(--yellow);color:var(--black)}
-    .title{font-weight:800;line-height:1.1;margin:0 0 8px}
-    .title--xl{font-size:clamp(28px,6vw,56px)}
-    .title--xxl{font-size:clamp(36px,9vw,72px)}
-    .lead{font-size:clamp(16px,2.4vw,22px);margin:8px 0 0}
-    .cta-phone{display:inline-block;font-weight:800;font-size:clamp(26px,7vw,60px);padding:.25em .6em;border:3px solid currentColor;border-radius:12px}
-    .btn{display:inline-block;font-weight:700;border:2px solid currentColor;border-radius:10px;padding:.6em 1em}
-    .btn--invert{background:transparent}
-    .nav{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-    .nav a{padding:.5em 1em;border:2px solid currentColor;border-radius:12px;font-weight:700}
-    .grid{display:grid;gap:16px}
-    .grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .note{font-size:clamp(14px,2.2vw,18px)}
-    ul.checklist{list-style: none; padding:0; margin:12px auto; max-width:900px; text-align:left}
-    ul.checklist li{margin:10px 0; padding-left:1.4em; position:relative}
-    ul.checklist li::before{content:"✓"; position:absolute; left:0; font-weight:800}
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      padding:0;
+      background:var(--black);
+      color:var(--yellow);
+      font-family:var(--font);
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      height:auto;
+      display:block;
+      margin:0 auto;
+    }
+
+    .wrap{
+      max-width:1100px;
+      margin:auto;
+      padding:24px;
+    }
+
+    .section{
+      padding:32px 16px;
+      text-align:center;
+    }
+
+    .section--dark{
+      background:var(--black);
+      color:var(--yellow);
+    }
+
+    .section--light{
+      background:var(--yellow);
+      color:var(--black);
+    }
+
+    .title{
+      font-weight:800;
+      line-height:1.1;
+      margin:0 0 8px;
+    }
+
+    .title--xl{
+      font-size:clamp(28px,6vw,56px);
+    }
+
+    .title--xxl{
+      font-size:clamp(36px,9vw,72px);
+    }
+
+    .lead{
+      font-size:clamp(16px,2.4vw,22px);
+      margin:8px 0 0;
+    }
+
+    .cta-phone{
+      display:inline-block;
+      font-weight:800;
+      font-size:clamp(26px,7vw,60px);
+      padding:.25em .6em;
+      border:3px solid currentColor;
+      border-radius:12px;
+      margin:4px;
+    }
+
+    .btn{
+      display:inline-block;
+      font-weight:700;
+      border:2px solid currentColor;
+      border-radius:10px;
+      padding:.6em 1em;
+    }
+
+    .btn--invert{
+      background:transparent;
+    }
+
+    .grid{
+      display:grid;
+      gap:16px;
+    }
+
+    .grid--2{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .note{
+      font-size:clamp(14px,2.2vw,18px);
+    }
+
+    ul.checklist{
+      list-style:none;
+      padding:0;
+      margin:12px auto;
+      max-width:900px;
+      text-align:left;
+    }
+
+    ul.checklist li{
+      margin:10px 0;
+      padding-left:1.4em;
+      position:relative;
+    }
+
+    ul.checklist li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      font-weight:800;
+    }
+
+    /* HORIZONTAL NAVIGATION */
+    .main-nav{
+      background:var(--yellow);
+      color:var(--black);
+      border-top:3px solid var(--black);
+      border-bottom:3px solid var(--black);
+    }
+
+    .main-nav ul{
+      max-width:1100px;
+      margin:0 auto;
+      padding:10px 12px;
+      list-style:none;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:8px;
+    }
+
+    .main-nav li{
+      margin:0;
+      padding:0;
+    }
+
+    .main-nav a{
+      display:inline-block;
+      padding:10px 16px;
+      border:2px solid var(--black);
+      border-radius:8px;
+      font-weight:800;
+      text-decoration:none;
+      background:var(--yellow);
+      color:var(--black);
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus{
+      background:var(--black);
+      color:var(--yellow);
+    }
+
+    /* SMALL POLICY LINK ROWS */
+    .sub-nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:center;
+      margin-top:12px;
+    }
+
+    .sub-nav a{
+      padding:.5em 1em;
+      border:2px solid currentColor;
+      border-radius:10px;
+      font-weight:700;
+    }
+
+    @media(max-width:700px){
+
+      .main-nav ul{
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        justify-content:flex-start;
+        -webkit-overflow-scrolling:touch;
+      }
+
+      .main-nav a{
+        white-space:nowrap;
+      }
+
+      .grid--2{
+        grid-template-columns:1fr;
+      }
+
+      .wrap{
+        padding:20px 14px;
+      }
+    }
   </style>
 
-  <!-- Google Analytics (legacy UA shown; GA4 recommended) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-19015949-1"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config','UA-19015949-1');
   </script>
 </head>
+
 <body>
 
-  <!-- HERO (dark) -->
+  <!-- HERO -->
   <header class="section section--dark">
     <div class="wrap">
-      <img src="/images/350by350a-green-ride.jpg" alt="Green Ride logo" style="width:120px;height:auto" />
-      <h1 class="title title--xxl" style="margin-top:10px">San Diego Airport Curbside Pickup</h1>
-      <p class="lead">Follow our simple <strong>2 Phone Call Policy</strong> and meet your driver at the nearest curbside zone sign.</p>
-      <p style="margin:18px 0 0;">
-        <a class="cta-phone" href="tel:800-893-7210">Toll-Free: 800-893-7210</a><br>
-        
+
+      <img
+        src="/images/350by350a-green-ride.jpg"
+        alt="Green Ride logo"
+        style="width:120px;height:auto"
+      >
+
+      <h1 class="title title--xxl" style="margin-top:10px">
+        San Diego Airport Curbside Pickup
+      </h1>
+
+      <p class="lead">
+        Follow our simple <strong>2 Phone Call Policy</strong>
+        and meet your driver at the nearest curbside zone sign.
       </p>
+
       <p style="margin:18px 0 0;">
-        <a class="cta-phone" href="tel:619-200-2060">Call: 619-200-2060</a>
+        <a class="cta-phone" href="tel:18008937210">
+          Toll-Free: 800-893-7210
+        </a>
       </p>
+
+      <p style="margin:10px 0 0;">
+        <a class="cta-phone" href="tel:16192002060">
+          Call: 619-200-2060
+        </a>
+      </p>
+
     </div>
   </header>
 
-  <!-- NAV / QUICK LINKS (light) -->
-  <section class="section section--light">
-    <div class="wrap">
-      <div class="nav">
-        <a href="https://greenride.net">Home</a>
-        <a href="https://greenride.net/makereservation.html">Reservations Online</a>
-        <a href="https://greenride.net/curbside-.html">Curbside</a>
-        <a href="https://greenride.net/rates.html">Airport Rates</a>
-        <a href="https://greenride.net/Receipts.htm">Receipts</a>
-        <a href="/images/RackCard-04-16-2017-Publisher-NON-RESIDENTIAL-FLATRATE1_Page_2.gif">Local Rates</a>
-        <a href="https://www.google.com/maps/d/edit?ll=32.74796396920895%2C-117.15133700000001&spn=0.22869%2C0.354309&hl=en&t=m&gl=us&msa=0&z=10&source=embed&ie=UTF8&mid=1mRGTwcwBd-oVj3EB8E-s0IZTxiw">Residential Rates Map</a>
-        <a href="https://greenride.net/terms_and_conditions.html">Policy</a>
-        <a href="https://greenride.net/Cancel.html" title="Cancellation Policy">Cancellation</a>
-        <a href="https://greenride.net/credit_card_authorization_online-b.htm">Credit Card Authorization</a>
-        <a href="https://greenride.net/aboutus.html">About</a>
-        <a href="https://greenride.net/contact-2.html">Contact</a>
-      </div>
-    </div>
-  </section>
+  <!-- HORIZONTAL NAVIGATION -->
+  <nav class="main-nav" aria-label="Primary navigation">
+    <ul>
 
-  <!-- VISUAL BANNER (dark) -->
+      <li>
+        <a href="https://greenride.net/">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="https://greenride.net/makereservation.html">
+          Reservation
+        </a>
+      </li>
+
+      <li>
+        <a href="https://greenride.net/curbside-.html" aria-current="page">
+          Curbside
+        </a>
+      </li>
+
+      <li>
+        <a href="https://greenride.net/rates.html">
+          Airport Rates
+        </a>
+      </li>
+
+      <li>
+        <a href="https://greenride.net/terms_and_conditions.html">
+          Policy
+        </a>
+      </li>
+
+      <li>
+        <a href="https://greenride.net/Cancel.html">
+          Cancellation
+        </a>
+      </li>
+
+      <li>
+        <a href="https://greenride.net/aboutus.html">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="https://greenride.net/contact-2.html">
+          Contact
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- CURBSIDE VISUAL -->
   <section class="section section--dark">
     <div class="wrap">
-      <img src="https://greenride.net/images/zone-x.png" alt="Green Ride curbside banner" />
-      <p class="lead" style="margin-top:10px">Curbside pickup zones are clearly marked outside the terminal.</p>
+
+      <img
+        src="https://greenride.net/images/zone-x.png"
+        alt="San Diego Airport curbside zone sign"
+        style="max-width:650px"
+      >
+
+      <p class="lead" style="margin-top:10px">
+        Curbside pickup zones are clearly marked outside the terminal.
+      </p>
+
     </div>
   </section>
 
-  <!-- POLICY LINKS (light) -->
+  <!-- POLICY LINKS -->
   <section class="section section--light">
     <div class="wrap">
-      <h2 class="title title--xl">Policies</h2>
-      <div class="nav" style="margin-top:10px">
-        <a href="https://greenride.net/smsprivacy.html#smsconsent">SMS Consent</a>
-        <a href="https://greenride.net/privacypolicy.html">Privacy Policy</a>
-        <a href="https://greenride.net/terms.html">Terms &amp; Conditions</a>
+
+      <h2 class="title title--xl">
+        Policies
+      </h2>
+
+      <div class="sub-nav">
+
+        <a href="https://greenride.net/smsprivacy.html#smsconsent">
+          SMS Consent
+        </a>
+
+        <a href="https://greenride.net/smsprivacy.html">
+          Privacy Policy
+        </a>
+
+        <a href="https://greenride.net/terms.html">
+          Terms &amp; Conditions
+        </a>
+
       </div>
+
     </div>
   </section>
 
-  <!-- 2 PHONE CALL POLICY (dark) -->
+  <!-- TWO PHONE CALL POLICY -->
   <section class="section section--dark">
     <div class="wrap">
-      <h2 class="title title--xl">2 Phone Call Policy</h2>
-      <div class="grid grid--2" style="align-items:start; margin-top:16px">
+
+      <h2 class="title title--xl">
+        2 Phone Call Policy
+      </h2>
+
+      <div class="grid grid--2" style="align-items:start;margin-top:16px;">
+
         <div>
-          <h3 class="title">1st Call</h3>
+
+          <h3 class="title">
+            1st Call
+          </h3>
+
           <ul class="checklist">
-            <li>Call us <strong>as soon as your plane lands</strong>.</li>
-            <li><a href="tel:800-893-7210">Toll-Free: 800-893-7210</a>
-            <a href="tel:619-200-2060"> / Call: 619-200-2060</a> <em>before you exit the plane</em>.</li>
+
+            <li>
+              Call us <strong>as soon as your plane lands</strong>.
+            </li>
+
+            <li>
+              Call
+              <a href="tel:18008937210">
+                <strong>800-893-7210</strong>
+              </a>
+              or
+              <a href="tel:16192002060">
+                <strong>619-200-2060</strong>
+              </a>
+              before you exit the plane.
+            </li>
+
           </ul>
+
         </div>
+
         <div>
-          <h3 class="title">2nd Call</h3>
+
+          <h3 class="title">
+            2nd Call
+          </h3>
+
           <ul class="checklist">
-            <li>Call again when you are <strong>outside at the main exit</strong> by the curb.</li>
-            <li>Find the nearest <strong>zone sign</strong> (A, B, C, etc.) and tell us your zone.</li>
+
+            <li>
+              Call again when you are
+              <strong>outside at the main exit by the curb</strong>.
+            </li>
+
+            <li>
+              Find the nearest <strong>zone sign</strong>
+              such as A, B, C, or another posted letter,
+              and tell us your zone.
+            </li>
+
           </ul>
+
         </div>
+
       </div>
-      <p class="lead" style="margin-top:10px">After your 2nd call, <strong>your driver will pull up to you</strong>.</p>
+
+      <p class="lead" style="margin-top:10px">
+        After your second call,
+        <strong>your driver will pull up to your location.</strong>
+      </p>
+
     </div>
   </section>
 
-  <!-- ZONE SIGN (light) -->
+  <!-- ZONE SIGN -->
   <section class="section section--light">
     <div class="wrap">
-      <h2 class="title title--xl">Find the Nearest Zone Sign</h2>
-      <p class="lead">Right at the curb — look up for the lettered sign and have it ready when you call.</p>
-      <img src="https://greenride.net/images/zone-x.png" alt="San Diego Airport Zone Signs by the curb" style="max-width:650px" />
+
+      <h2 class="title title--xl">
+        Find the Nearest Zone Sign
+      </h2>
+
+      <p class="lead">
+        When you reach the curb, look for the nearest lettered zone sign
+        and have the zone ready when you call.
+      </p>
+
+      <img
+        src="https://greenride.net/images/zone-x.png"
+        alt="San Diego Airport curbside zone signs"
+        style="max-width:650px;margin-top:20px"
+      >
+
     </div>
   </section>
 
-  <!-- PHONE CTA (dark) -->
+  <!-- PHONE CTA -->
   <section class="section section--dark">
     <div class="wrap">
-      <h2 class="title title--xxl"><a href="tel:800-893-7210">Toll-Free: 800-893-7210</a>
-      <br> <a href="tel:619-200-2060">Local: 619-200-2060</a></h2></p>
+
+      <h2 class="title title--xxl">
+
+        <a href="tel:18008937210">
+          800-893-7210
+        </a>
+
+        <br>
+
+        <a href="tel:16192002060">
+          619-200-2060
+        </a>
+
+      </h2>
+
+      <p class="lead">
+        Call Green Ride when your flight lands and again when you are ready at the curb.
+      </p>
+
     </div>
   </section>
 
-  <!-- IMAGE STRIP (light) -->
+  <!-- VEHICLE IMAGE -->
   <section class="section section--light">
     <div class="wrap">
-      <img src="/images/car-service-san-diego.png" alt="San Diego car service curbside" style="max-width:950px" />
+
+      <img
+        src="/images/car-service-san-diego.jpg"
+        alt="Green Ride San Diego airport car service"
+        style="max-width:950px"
+      >
+
     </div>
   </section>
 
-  <!-- FEES & NOTES (dark) -->
+  <!-- IMPORTANT NOTES -->
   <section class="section section--dark">
     <div class="wrap">
-      <h2 class="title title--xl">Important Notes</h2>
+
+      <h2 class="title title--xl">
+        Important Notes
+      </h2>
+
       <ul class="checklist" style="max-width:950px">
-        <li>All tolls and parking fees are additional.</li>
-        <li>20% gratuity will be added to all reservations.</li>
-        <li>Additional waiting time charges (if any) apply by the minute.</li>
-        <li>*Up to 4 passengers ride for the same rate in a sedan (same party &amp; address).</li>
-        <li>GreenRide.net may charge for time spent outside normal point-to-point service at $80/hr + 20% gratuity.</li>
+
+        <li>
+          All tolls and parking fees are additional.
+        </li>
+
+        <li>
+          20% gratuity will be added to all reservations.
+        </li>
+
+        <li>
+          Additional waiting time charges, if applicable, are charged by the minute.
+        </li>
+
+        <li>
+          Up to 4 passengers from the same party and pickup address
+          ride for the same sedan rate.
+        </li>
+
+        <li>
+          GreenRide.net may charge for time spent outside normal
+          point-to-point service at $80 per hour plus 20% gratuity.
+        </li>
+
       </ul>
+
     </div>
   </section>
 
-  <!-- FOOTER (light) -->
+  <!-- FOOTER -->
   <footer class="section section--light">
     <div class="wrap">
-      <p class="lead" style="margin:0">&copy; 2003–2025 • Green Ride • All rights reserved</p>
-      <p class="note" style="margin:6px 0 0">PSC-TCP-17591-P</p>
+
+      <p class="lead" style="margin:0">
+        &copy; 2003–2026 • Green Ride • All Rights Reserved
+      </p>
+
+      <p class="note" style="margin:6px 0 0">
+        PSC-TCP-17591-P
+      </p>
+
+      <p class="note" style="margin:8px 0 0">
+        <a href="https://greenride.net/">
+          GreenRide.net
+        </a>
+      </p>
+
     </div>
   </footer>
-
-  <!-- Optional: Legacy live chat vars (not loading external script here)
-  <script>
-    var lhnAccountN = "22643-1";
-    var lhnButtonN = 4830;
-    var lhnChatPosition = 'righttab';
-    var lhnInviteEnabled = 1;
-    var lhnWindowN = 0;
-    var lhnDepartmentN = 0;
-    var lhnChatPositionYVal = 100;
-  </script>
-  -->
 
 </body>
 </html>
