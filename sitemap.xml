@@ -2,54 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://greenride.net/</loc>
-    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://greenride.net/makereservation.html</loc>
-    <priority>0.9</priority>
+    <loc>https://greenride.net/airport-rates/</loc>
   </url>
   <url>
-    <loc>https://greenride.net/rates.html</loc>
-    <priority>0.9</priority>
+    <loc>https://greenride.net/local-rates/</loc>
   </url>
   <url>
-    <loc>https://greenride.net/LocalRatesSanDiegoTaxi.html</loc>
-    <priority>0.9</priority>
+    <loc>https://greenride.net/airport-pickup/</loc>
   </url>
   <url>
-    <loc>https://greenride.net/curbside-.html</loc>
-    <priority>0.8</priority>
+    <loc>https://greenride.net/reservations/</loc>
   </url>
   <url>
-    <loc>https://greenride.net/Receipts.htm</loc>
-    <priority>0.6</priority>
+    <loc>https://greenride.net/destinations/</loc>
   </url>
   <url>
-    <loc>https://greenride.net/aboutus.html</loc>
-    <priority>0.7</priority>
+    <loc>https://greenride.net/about/</loc>
   </url>
   <url>
-    <loc>https://greenride.net/contact-2.html</loc>
-    <priority>0.8</priority>
+    <loc>https://greenride.net/contact/</loc>
   </url>
   <url>
-    <loc>https://greenride.net/terms_and_conditions.html</loc>
-    <priority>0.6</priority>
+    <loc>https://greenride.net/receipts/</loc>
   </url>
   <url>
-    <loc>https://greenride.net/terms.html</loc>
-    <priority>0.4</priority>
+    <loc>https://greenride.net/cancellation/</loc>
   </url>
   <url>
-    <loc>https://greenride.net/Cancel.html</loc>
-    <priority>0.6</priority>
+    <loc>https://greenride.net/privacy/</loc>
   </url>
   <url>
-    <loc>https://greenride.net/smsprivacy.html</loc>
-    <priority>0.5</priority>
+    <loc>https://greenride.net/terms/</loc>
   </url>
   <url>
-    <loc>https://greenride.net/credit_card_authorization_online-b.htm</loc>
-    <priority>0.6</priority>
+    <loc>https://greenride.net/credit-card/</loc>
+  </url>
+  <url>
+    <loc>https://greenride.net/destinations/downtown/</loc>
+  </url>
+  <url>
+    <loc>https://greenride.net/destinations/la-jolla/</loc>
+  </url>
+  <url>
+    <loc>https://greenride.net/destinations/coronado/</loc>
+  </url>
+  <url>
+    <loc>https://greenride.net/destinations/del-mar/</loc>
+  </url>
+  <url>
+    <loc>https://greenride.net/destinations/carlsbad/</loc>
+  </url>
+  <url>
+    <loc>https://greenride.net/destinations/pacific-beach/</loc>
   </url>
 </urlset>
